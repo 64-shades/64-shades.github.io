@@ -6,22 +6,20 @@
 # -- Project information -----------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#project-information
 
-project = '64 Shades'
-copyright = '2025, 64 Shades'
-author = '64 Shades'
+project = "64 Shades"
+copyright = "2025, 64 Shades"
+author = "64 Shades"
 
 # -- General configuration ---------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#general-configuration
 
-extensions = []
+extensions = []  # type: ignore
 
-templates_path = ['_templates']
-exclude_patterns = []
-
-
+templates_path = ["_templates"]
+exclude_patterns = []  # type: ignore
 
 # -- Options for HTML output -------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#options-for-html-output
 
-html_theme = 'alabaster'
-html_static_path = ['_static']
+html_theme = "alabaster"
+html_static_path = ["_static"]
