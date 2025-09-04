@@ -69,7 +69,7 @@ instance/
 .scrapy
 
 # Sphinx documentation
-docs/_build/
+frontend/_build/
 
 # PyBuilder
 .pybuilder/
@@ -205,3 +205,8 @@ cython_debug/
 marimo/_static/
 marimo/_lsp/
 __marimo__/
+
+node_modules
+_site
+
+frontend/assets/tailwind.css

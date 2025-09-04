@@ -1,0 +1,22 @@
+name: 🥇 First Interaction
+
+permissions:
+  contents: write
+
+on:
+  pull_request_target:
+    types: [opened, reopened]
+  issues:
+    types: [opened]
+
+jobs:
+  first-interaction:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/first-interaction@v3
+        with:
+          repo_token: '${{ secrets.GITHUB_TOKEN }}'
+          issue_message: |
+            Thanks for opening this issue! We appreciate your contribution.
+          pr_message: |
+            Thanks for your first pull request! We appreciate your contribution.

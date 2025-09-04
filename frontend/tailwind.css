@@ -1,0 +1,17 @@
+@import 'tailwindcss';
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+	--role-border: 2px solid;
+}
+
+@theme {
+	--color-table-header: #091a52;
+	--color-highlight: #ff5733;
+	--color-role-tal: red;
+	--color-role-fischer: purple;
+	--color-role-kasparov: blue;
+}
