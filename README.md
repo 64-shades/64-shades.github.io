@@ -3,8 +3,8 @@
 [![View the project board](https://img.shields.io/badge/view_the_project_board-orange?style=for-the-badge)](https://github.com/orgs/64-shades/projects/1/views/1)
 [![GitHub Sponsors](https://img.shields.io/github/sponsors/jbampton?style=for-the-badge&label=Sponsor%20John%20Bampton&labelColor=red&color=cyan)](https://github.com/sponsors/jbampton)
 [![Discord](https://img.shields.io/discord/1400571757554958437?label=Discord&style=for-the-badge)](https://discord.gg/a6qtB4csnk)
-[![Documentation Status](https://img.shields.io/website?url=https%3A%2F%2F64-shades.readthedocs.io%2F&label=read-the-docs&style=for-the-badge)](https://64-shades.readthedocs.io/en/latest/)
-[![Website Status](https://img.shields.io/website?url=https%3A%2F%2F64-shades.github.io%2F&label=github-pages&style=for-the-badge)](https://64-shades.github.io/)
+[![GitHub Pages Status](https://img.shields.io/website?url=https%3A%2F%2F64-shades.github.io%2F&label=github-pages&style=for-the-badge)](https://64-shades.github.io/)
+[![Read the Docs Documentation Status](https://img.shields.io/website?url=https%3A%2F%2F64-shades.readthedocs.io%2F&label=read-the-docs&style=for-the-badge)](https://64-shades.readthedocs.io/en/latest/)
 
 [![CodeQL](https://github.com/64-shades/64-shades.github.io/actions/workflows/codeql.yml/badge.svg?branch=main)](https://github.com/64-shades/64-shades.github.io/actions/workflows/codeql.yml)
 [![Dependabot Updates](https://github.com/64-shades/64-shades.github.io/actions/workflows/dependabot/dependabot-updates/badge.svg?branch=main)](https://github.com/64-shades/64-shades.github.io/actions/workflows/dependabot/dependabot-updates)
