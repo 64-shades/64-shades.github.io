@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="{{ '/assets/tailwind.css' | url  }}" />
     <link rel="icon" href="{{ '/assets/icons/favicon.ico' | url  }}" />
     <link rel="apple-touch-icon" href="{{ '/assets/icons/apple-touch-icon.png' | url  }}" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
     <meta name="generator" content="{{ eleventy.generator }}" />
   </head>
   <body class="flex flex-col min-h-screen font-montserrat text-white">
@@ -26,7 +27,9 @@ We’re here to celebrate the global game of chess with a vibrant, tech-loving c
         <!-- Top Navigation -->
         <nav class="flex flex-wrap justify-center text-center text-sm space-x-2">
           {% set navLinks = [
-            { url: '/', text: 'Home' }
+            { url: '/', text: 'Home' },
+            { url: '/games', text: 'Games' },
+            { url: '/quotes', text: 'Quotes' }
           ] %}
           {% for link in navLinks -%}
           <a href="{{ link.url | url  }}"
@@ -35,11 +38,34 @@ We’re here to celebrate the global game of chess with a vibrant, tech-loving c
         </nav>
         <!-- Content -->
         {{ content | safe }}
+        <div class="main-container">
+            <h1 class="text-4xl sm:text-5xl md:text-6xl font-extrabold mb-4 text-white drop-shadow-lg">Welcome to our Chess Website</h1>
+            <p class="text-lg sm:text-xl md:text-2xl text-gray-400 max-w-2xl text-center">
+                Explore our world of chess. If you're looking for a hidden secret, try typing a special word on your keyboard...
+            </p>
+            <div class="code-input-hint">
+                Hint: It's the name of the game itself.
+            </div>
+        </div>
+        <div id="game-container" class="game-container">
+            <canvas id="chess-canvas" width="600" height="600"></canvas>
+            <div class="game-info">
+                <p><strong>Fischer vs. Spassky - Game 6, 1972 World Championship</strong></p>
+                <p id="current-move-display">Move: 1. e4</p>
+            </div>
+            <div class="controls">
+                <button onclick="prevMove()">« Prev</button>
+                <button id="play-pause-btn" onclick="togglePlayPause()">Play</button>
+                <button onclick="nextMove()">Next »</button>
+            </div>
+        </div>
       </main>
+
     </div>
     <!-- Footer -->
     <footer class="h-[85px] text-center p-8 text-sm text-white/60">
       <p>&copy; <span id="year"></span> 64 Shades. All rights reserved.</p>
     </footer>
+    <script src="{{ '/assets/eggs.js' | url  }}"></script>
   </body>
 </html>
