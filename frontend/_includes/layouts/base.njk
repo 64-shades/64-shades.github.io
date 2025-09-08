@@ -38,27 +38,39 @@ We’re here to celebrate the global game of chess with a vibrant, tech-loving c
         </nav>
         <!-- Content -->
         {{ content | safe }}
-        <div class="main-container">
-            <h1 class="text-4xl sm:text-5xl md:text-6xl font-extrabold mb-4 text-white drop-shadow-lg">Welcome to our Chess Website</h1>
-            <p class="text-lg sm:text-xl md:text-2xl text-gray-400 max-w-2xl text-center">
-                Explore our world of chess. If you're looking for a hidden secret, try typing a special word on your keyboard...
-            </p>
-            <div class="code-input-hint">
-                Hint: It's the name of the game itself.
-            </div>
+
+    <div class="main-container" id="main-container">
+        <h1 class="text-4xl sm:text-5xl md:text-6xl font-extrabold mb-4 text-white drop-shadow-lg">Welcome to the Chess Website</h1>
+        <p class="text-lg sm:text-xl md:text-2xl text-gray-400 max-w-2xl text-center">
+            Explore our world of chess. If you're looking for a hidden secret, try typing a special word on your keyboard...
+        </p>
+        <div class="code-input-hint">
+            Hint: There's more than one! Try "chess" or a famous player's name.
         </div>
-        <div id="game-container" class="game-container">
-            <canvas id="chess-canvas" width="600" height="600"></canvas>
-            <div class="game-info">
-                <p><strong>Fischer vs. Spassky - Game 6, 1972 World Championship</strong></p>
-                <p id="current-move-display">Move: 1. e4</p>
-            </div>
-            <div class="controls">
-                <button onclick="prevMove()">« Prev</button>
-                <button id="play-pause-btn" onclick="togglePlayPause()">Play</button>
-                <button onclick="nextMove()">Next »</button>
-            </div>
+    </div>
+
+    <div id="game-container" class="game-container">
+        <canvas id="chess-canvas" width="600" height="600"></canvas>
+        <div class="game-info">
+            <p><strong>Fischer vs. Spassky - Game 6, 1972 World Championship</strong></p>
+            <p id="current-move-display">Move: 1. e4</p>
         </div>
+        <div class="controls">
+            <button onclick="prevMove()">« Prev</button>
+            <button id="play-pause-btn" onclick="togglePlayPause()">Play</button>
+            <button onclick="nextMove()">Next »</button>
+        </div>
+    </div>
+
+    <div id="kasparov-container" class="kasparov-container">
+        <h2 class="text-3xl font-bold text-white mb-4">Garry Kasparov's Triumph</h2>
+        <p class="text-lg text-gray-300 mb-6">
+            Garry Kasparov becomes the youngest World Chess Champion in 1985 after defeating Anatoly Karpov.
+        </p>
+        <img src="{{ '/assets/images/kasparov.jpg' | url  }}" alt="Garry Kasparov winning the World Chess Championship in 1985." class="rounded-lg">
+        <button class="mt-8" onclick="showMainScreen()">Back to Main</button>
+    </div>
+
       </main>
 
     </div>
