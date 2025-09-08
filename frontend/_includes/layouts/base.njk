@@ -4,11 +4,11 @@
     <meta charset="UTF-8" />
     <title>{{ title }}</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="The Official 64 Shades World Chess Team" />
+    <meta name="description" content="The Official 64 Shades World Chess Team and Games Club" />
     <link rel="stylesheet" href="{{ '/assets/tailwind.css' | url  }}" />
     <link rel="icon" href="{{ '/assets/icons/favicon.ico' | url  }}" />
     <link rel="apple-touch-icon" href="{{ '/assets/icons/apple-touch-icon.png' | url  }}" />
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet" />
     <meta name="generator" content="{{ eleventy.generator }}" />
   </head>
   <body class="flex flex-col min-h-screen font-montserrat text-white">
@@ -29,6 +29,7 @@ We’re here to celebrate the global game of chess with a vibrant, tech-loving c
           {% set navLinks = [
             { url: '/', text: 'Home' },
             { url: '/games', text: 'Games' },
+            { url: '/pitfalls', text: 'Pitfalls'},
             { url: '/quotes', text: 'Quotes' }
           ] %}
           {% for link in navLinks -%}

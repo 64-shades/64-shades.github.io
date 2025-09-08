@@ -16,6 +16,10 @@
 	--color-role-kasparov: blue;
 }
 
+body {
+    background: blue;
+}
+
 .main-container, .kasparov-container {
     display: flex;
     flex-direction: column;
