@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Games | 64 Shades</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="The Official 64 Shades World Chess Team and Games Club" />
+    <link rel="stylesheet" href="/assets/tailwind.css" />
+    <link rel="icon" href="/assets/icons/favicon.ico" />
+    <link rel="apple-touch-icon" href="/assets/icons/apple-touch-icon.png" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet" />
+    <meta name="generator" content="Eleventy v3.1.2" />
+  </head>
+  <body class="flex flex-col min-h-screen font-montserrat text-white">
+    <!-- Background overlay -->
+    <div class="flex-grow min-h-[calc(100vh-85px)] bg-black/65 flex justify-center p-12 max-md:p-4">
+      <main class="max-w-[620px] w-[calc(100%-1rem)] bg-black/55 p-4 rounded-xl shadow-[0_0_50px_rgba(0,0,0,0.6)] flex flex-col gap-6">
+        <!-- Logo -->
+        <div class="text-center">
+          <a href="/">
+            <img src="/assets/logo.jpeg" alt="64 Shades Logo" class="w-45 mx-auto rounded-full" />
+          </a>
+          <h1 class="text-lg mt-5 uppercase tracking-[2px] font-bold">64 Shades</h1>
+          <p class="text-sm opacity-85 mt-1">A team of cutting-edge chess players who also love open-source on GitHub.
+We’re here to celebrate the global game of chess with a vibrant, tech-loving community.</p>
+        </div>
+        <!-- Top Navigation -->
+        <nav class="flex flex-wrap justify-center text-center text-sm space-x-2">
+          
+          <a href="/"
+             class="hover:text-white  text-gray-300">Home</a><a href="/games"
+             class="hover:text-white  text-gray-300">Games</a><a href="/pitfalls"
+             class="hover:text-white  text-gray-300">Pitfalls</a><a href="/quotes"
+             class="hover:text-white  text-gray-300">Quotes</a>
+        </nav>
+        <!-- Content -->
+        <ul>
+<li><a href="https://en.wikipedia.org/wiki/Chinese_checkers">Chinese Checkers</a></li>
+<li><a href="https://www.classification.gov.au/titles/harmegedo-6-player-chess">Harmegedo</a>
+<ul>
+<li>https://play.google.com/store/apps/details?id=com.harmegedo</li>
+</ul>
+</li>
+<li><a href="https://en.wikipedia.org/wiki/Reversi">Reversi</a></li>
+</ul>
+
+
+    <div class="main-container" id="main-container">
+        <h1 class="text-4xl sm:text-5xl md:text-6xl font-extrabold mb-4 text-white drop-shadow-lg">Welcome to the Chess Website</h1>
+        <p class="text-lg sm:text-xl md:text-2xl text-gray-400 max-w-2xl text-center">
+            Explore our world of chess. If you're looking for a hidden secret, try typing a special word on your keyboard...
+        </p>
+        <div class="code-input-hint">
+            Hint: There's more than one! Try "chess" or a famous player's name.
+        </div>
+    </div>
+
+    <div id="game-container" class="game-container">
+        <canvas id="chess-canvas" width="600" height="600"></canvas>
+        <div class="game-info">
+            <p><strong>Fischer vs. Spassky - Game 6, 1972 World Championship</strong></p>
+            <p id="current-move-display">Move: 1. e4</p>
+        </div>
+        <div class="controls">
+            <button onclick="prevMove()">« Prev</button>
+            <button id="play-pause-btn" onclick="togglePlayPause()">Play</button>
+            <button onclick="nextMove()">Next »</button>
+        </div>
+    </div>
+
+    <div id="kasparov-container" class="kasparov-container">
+        <h2 class="text-3xl font-bold text-white mb-4">Garry Kasparov's Triumph</h2>
+        <p class="text-lg text-gray-300 mb-6">
+            Garry Kasparov becomes the youngest World Chess Champion in 1985 after defeating Anatoly Karpov.
+        </p>
+        <img src="/assets/images/kasparov.jpg" alt="Garry Kasparov winning the World Chess Championship in 1985." class="rounded-lg">
+        <button class="mt-8" onclick="showMainScreen()">Back to Main</button>
+    </div>
+
+      </main>
+
+    </div>
+    <!-- Footer -->
+    <footer class="h-[85px] text-center p-8 text-sm text-white/60">
+      <p>&copy; <span id="year"></span> 64 Shades. All rights reserved.</p>
+    </footer>
+    <script src="/assets/eggs.js"></script>
+  </body>
+</html>
