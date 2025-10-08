@@ -1,4 +1,6 @@
-# 64 Shades 🀄 🃏 ♟️ 🎲 🕹️
+<div align="center">
+  <h1>64 Shades 🀄 🃏 ♟️ 🎲 🕹️</h1>
+</div>
 
 [![View the project board](https://img.shields.io/badge/view_the_project_board-orange?style=for-the-badge)](https://github.com/orgs/64-shades/projects/1/views/1)
 [![GitHub Sponsors](https://img.shields.io/github/sponsors/jbampton?style=for-the-badge&label=Sponsor%20John%20Bampton&labelColor=red&color=cyan)](https://github.com/sponsors/jbampton)
