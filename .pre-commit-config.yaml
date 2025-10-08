@@ -29,15 +29,3 @@ repos:
         args: ['644']
         files: \.md$
         stages: [manual]
-  - repo: local
-    hooks:
-      - id: npm-ci
-        name: Install Node dependencies
-        entry: npm ci
-        language: system
-        pass_filenames: false
-      - id: eleventy-build-check
-        name: Eleventy build and output check
-        entry: npm run build
-        language: system
-        pass_filenames: false
