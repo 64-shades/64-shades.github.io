@@ -27,14 +27,6 @@ This website is built using ...
 - [Sphinx](https://www.sphinx-doc.org/en/master/) is a powerful and widely-used documentation generator written in Python. It is particularly popular within the Python community and is considered the de facto standard for documenting Python projects.
 - [reStructuredText (RST)](https://www.sphinx-doc.org/en/master/usage/restructuredtext/basics.html) is a lightweight markup language designed for creating easy-to-read and easy-to-write plaintext documents that can be automatically converted to various output formats, such as HTML, LaTeX (and thus PDF), and more. It is a key component of the Docutils project and is widely used in the Python community for writing technical documentation, including Python's official documentation and documentation for many Python libraries.
 
-Read below for instructions about the current static development site hosted on [GitHub Pages](https://pages.github.com/).
-
----
-
-### Getting Started / Building the Site
-
-To start a local development server with live reload, run:
-
 ---
 
 ### Build the Documentation
