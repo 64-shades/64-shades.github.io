@@ -55,3 +55,15 @@ div.sphinxsidebar ul li a {
     border: 1px solid #cccccc;
     background-color: #ffffff;
 }
+
+/* Sidebar */
+div.sphinxsidebar {
+    /* White with 80% opacity */
+    background-color: rgba(255, 255, 255, 0.8) !important;
+}
+
+/* Optional: For narrow/mobile view sidebar */
+.narrow-sidebar {
+    /* White with 80% opacity */
+    background-color: rgba(255, 255, 255, 0.8) !important;
+}
