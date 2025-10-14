@@ -1,7 +1,13 @@
 # https://github.com/super-linter/super-linter
 name: 🧹 Super-Linter
 
-on: [pull_request]
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
 
 permissions:
   contents: read
