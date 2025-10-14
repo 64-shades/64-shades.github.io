@@ -1,0 +1,55 @@
+/* -------------------------------------- */
+/* 1. Default Background for ALL pages    */
+/* -------------------------------------- */
+
+body {
+    /* Replace 'default_bg.jpg' with your default image file name/path */
+    background-image: url('../images/default_bg.jpg') !important;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed; /* Optional: Makes the background scroll with the content */
+    /* You may need to use !important to override Alabaster's default styles */
+}
+
+
+/* -------------------------------------- */
+/* 2. Custom Background for SPECIFIC pages */
+/* -------------------------------------- */
+
+/* The class is the page name (e.g., custom_page.rst becomes .custom_page) */
+/* This will override the default background */
+
+.first-meetup {
+    /* Replace 'custom_page_bg.jpg' with your custom image file name/path */
+    background-image: url('../images/first-meetup-second-game.jpg') !important;
+}
+
+/* If you want a specific page to have NO image (just a solid color)
+.index {
+    background-image: none !important;
+    background-color: white !important;
+}
+*/
+
+/* -------------------------------------- */
+/* Sidebar Legibility Fix (Option 3)      */
+/* -------------------------------------- */
+
+.sphinxsidebar {
+    /* Solid, dark background */
+    background: #1e1e1e;
+
+    /* Light text */
+    color: #f0f0f0;
+}
+
+/* Ensure links are a contrasting color (like light blue or yellow) */
+.sphinxsidebar a {
+    color: #A5DEF0;
+}
+
+/* Ensure search box text is readable */
+.sphinxsidebar input[type="text"] {
+    background-color: #2e2e2e; /* Slightly lighter dark background for the input field */
+    color: white;
+}

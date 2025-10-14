@@ -23,3 +23,8 @@ exclude_patterns = []  # type: ignore
 
 html_theme = "alabaster"
 html_static_path = ["_static"]
+
+# Add your custom CSS file
+html_css_files = [
+    "css/custom.css",
+]
