@@ -15,12 +15,17 @@ documentation for details.
    :maxdepth: 2
    :caption: Contents:
 
-   about
-   games
+   history-of-the-club
 
 .. toctree::
    :maxdepth: 2
-   :caption: History
+   :caption: Events
 
-   first-meetup
-   second-meetup
+   first-event
+   second-event
+
+.. toctree::
+   :maxdepth: 2
+   :caption: About
+
+   games
