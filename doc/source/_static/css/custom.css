@@ -19,10 +19,14 @@ body {
 /* The class is the page name (e.g., custom_page.rst becomes .custom_page) */
 /* This will override the default background */
 
-.first-meetup {
+.first-event {
     /* Replace 'custom_page_bg.jpg' with your custom image file name/path */
     background-image: url('../images/first-meetup-second-game.jpg') !important;
 }
+.history-of-the-club {
+    background-image: url('../images/first-meetup-first-game.jpg') !important;
+}
+
 
 /* If you want a specific page to have NO image (just a solid color)
 .index {
@@ -40,12 +44,12 @@ body {
     background: #1e1e1e;
 
     /* Light text */
-    color: #f0f0f0;
+    color: white;
 }
 
 /* Ensure links are a contrasting color (like light blue or yellow) */
 .sphinxsidebar a {
-    color: #A5DEF0;
+    color: white;
 }
 
 /* Ensure search box text is readable */
