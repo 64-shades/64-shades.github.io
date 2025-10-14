@@ -1,59 +1,57 @@
-/* -------------------------------------- */
-/* 1. Default Background for ALL pages    */
-/* -------------------------------------- */
+/* --- 1. Set the Sidebar Background and Text Color --- */
 
-body {
-    /* Replace 'default_bg.jpg' with your default image file name/path */
-    background-image: url('../images/default_bg.jpg') !important;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-attachment: fixed; /* Optional: Makes the background scroll with the content */
-    /* You may need to use !important to override Alabaster's default styles */
+/* Target the main sidebar wrapper */
+div.sphinxsidebar {
+    background: #ffffff; /* Pure white background */
+    border-right: 1px solid #e0e0e0; /* Optional: Add a subtle separator line */
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.05); /* Optional: Soft shadow for depth */
+    color: #333333; /* Default text color (dark gray for legibility) */
+}
+
+/* Ensure headings/titles in the sidebar are also dark and legible */
+div.sphinxsidebar h1,
+div.sphinxsidebar h3 {
+    color: #1a1a1a; /* Very dark text for headings */
 }
 
 
-/* -------------------------------------- */
-/* 2. Custom Background for SPECIFIC pages */
-/* -------------------------------------- */
+/* --- 2. Ensure Link Legibility (Most Important) --- */
 
-/* The class is the page name (e.g., custom_page.rst becomes .custom_page) */
-/* This will override the default background */
-
-.first-event {
-    /* Replace 'custom_page_bg.jpg' with your custom image file name/path */
-    background-image: url('../images/first-meetup-second-game.jpg') !important;
-}
-.history-of-the-club {
-    background-image: url('../images/first-meetup-first-game.jpg') !important;
+/* Target all normal links in the sidebar */
+div.sphinxsidebar a {
+    color: #007bff; /* Standard blue link color, stands out on white */
+    text-decoration: none; /* Optional: Remove default underline */
 }
 
-
-/* If you want a specific page to have NO image (just a solid color)
-.index {
-    background-image: none !important;
-    background-color: white !important;
-}
-*/
-
-/* -------------------------------------- */
-/* Sidebar Legibility Fix (Option 3)      */
-/* -------------------------------------- */
-
-.sphinxsidebar {
-    /* Solid, dark background */
-    background: #1e1e1e;
-
-    /* Light text */
-    color: white;
+/* Change link color on hover for feedback */
+div.sphinxsidebar a:hover {
+    color: #0056b3; /* Darker blue on hover */
+    text-decoration: underline; /* Add underline on hover */
 }
 
-/* Ensure links are a contrasting color (like light blue or yellow) */
-.sphinxsidebar a {
-    color: white;
+/* --- 3. Fix Current/Active Navigation Links --- */
+
+/* This targets the currently active page link in the navigation */
+div.sphinxsidebar li.toctree-l1.current > a,
+div.sphinxsidebar li.toctree-l2.current > a {
+    font-weight: bold;
+    color: #1a1a1a !important; /* Make the current page link black/very dark */
+    /* Add a subtle indicator for the active link */
+    border-left: 3px solid #007bff;
+    padding-left: 5px; /* Adjust padding due to the new border */
 }
 
-/* Ensure search box text is readable */
-.sphinxsidebar input[type="text"] {
-    background-color: #2e2e2e; /* Slightly lighter dark background for the input field */
-    color: white;
+/* Ensure the link text for all navigation items is dark */
+div.sphinxsidebar ul li a {
+    color: #333333;
+    padding-left: 8px; /* Standard padding */
+}
+
+/* --- 4. Fix Search Box Text --- */
+
+/* Ensure the text inside the search box is dark and readable */
+#searchbox input[type="text"] {
+    color: #333333;
+    border: 1px solid #cccccc;
+    background-color: #ffffff;
 }
