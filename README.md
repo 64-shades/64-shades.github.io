@@ -17,7 +17,7 @@
 
 ## About the Site Generator
 
-This website is built using ...
+This site is built using ...
 
 ## Technology Stack
 
@@ -29,7 +29,7 @@ This website is built using ...
 
 ### Build the Documentation
 
-Run the following commands from the repo root to create the Sphinx documentation with Make:
+Run the following commands from the repository root to create the Sphinx documentation with Make:
 
 ```shell
 cd doc
