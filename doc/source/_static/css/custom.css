@@ -55,3 +55,14 @@ div.sphinxsidebar ul li a {
     border: 1px solid #cccccc;
     background-color: #ffffff;
 }
+
+/* Fix the footer */
+div.footer {
+    background: white;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    margin-top: 0px;
+}
+div.document {
+    background: white;
+}
