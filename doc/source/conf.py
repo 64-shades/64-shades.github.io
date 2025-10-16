@@ -27,9 +27,7 @@ html_static_path = ["_static"]
 html_logo = "_static/images/logo.jpeg"
 
 # Add your custom CSS file
-html_css_files = [
-    "css/custom.css",
-]
+html_css_files = ["css/custom.css"]
 
 html_js_files = [
     "js/page_background.js",

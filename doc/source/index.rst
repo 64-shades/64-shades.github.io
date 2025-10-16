@@ -15,7 +15,7 @@ documentation for details.
    :maxdepth: 2
    :caption: Contents:
 
-   history-of-the-club
+   the-first-challenger
 
 .. toctree::
    :maxdepth: 2
