@@ -1,4 +1,4 @@
-History of 64 Shades
+The First Challenger
 ====================
 
 The first challenger was strongman and hotel worker Henry as seen
