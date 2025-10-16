@@ -67,3 +67,7 @@ div.sphinxsidebar {
     /* White with 80% opacity */
     background-color: rgba(255, 255, 255, 0.8) !important;
 }
+
+.footer {
+    background: black;
+}
