@@ -13,7 +13,9 @@ author = "64 Shades"
 # -- General configuration ---------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#general-configuration
 
-extensions = []  # type: ignore
+extensions = [
+    "notfound.extension",
+]  # type: ignore
 
 templates_path = ["_templates"]
 exclude_patterns = []  # type: ignore
@@ -40,3 +42,5 @@ html_theme_options = {
     "github_button": True,  # This enables the GitHub button feature
     "github_type": "fork",  # Use 'watch' for the Star button
 }
+
+notfound_urls_prefix = "/"
