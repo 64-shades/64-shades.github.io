@@ -21,10 +21,16 @@ This site is built using ...
 
 ## Technology Stack
 
+### Hosting
+
 - [Read the Docs](https://about.readthedocs.com/) is a Continuous Documentation Deployment platform designed to simplify the process of building, versioning, and hosting technical documentation, particularly for software projects. It operates on the principle of "docs as code," integrating with version control systems like Git (GitHub, GitLab, Bitbucket) to automatically build and update documentation whenever changes are committed to the repository.
+
+### Framework
+
 - [Sphinx](https://www.sphinx-doc.org/en/master/) is a powerful and widely-used documentation generator written in Python. It is particularly popular within the Python community and is considered the de facto standard for documenting Python projects.
 - [reStructuredText (RST)](https://www.sphinx-doc.org/en/master/usage/restructuredtext/basics.html) is a lightweight markup language designed for creating easy-to-read and easy-to-write plaintext documents that can be automatically converted to various output formats, such as HTML, LaTeX (and thus PDF), and more. It is a key component of the Docutils project and is widely used in the Python community for writing technical documentation, including Python's official documentation and documentation for many Python libraries.
 - [JavaScript](https://en.wikipedia.org/wiki/JavaScript) is a programming language and core technology of the web platform, alongside HTML and CSS. Ninety-nine percent of websites on the World Wide Web use JavaScript on the client side for webpage behavior. Web browsers have a dedicated JavaScript engine that executes the client code.
+- [CSS](https://en.wikipedia.org/wiki/CSS), or Cascading Style Sheets, is a stylesheet language used to describe the presentation and styling of a document written in a markup language, most commonly HTML. It is a fundamental technology of the World Wide Web, working alongside HTML and JavaScript to create interactive and visually appealing websites. 
 
 ---
 
