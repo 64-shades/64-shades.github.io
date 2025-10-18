@@ -2,10 +2,10 @@
 
 /* Target the main sidebar wrapper */
 div.sphinxsidebar {
-    background: #ffffff; /* Pure white background */
+    background: #fff; /* Pure white background */
     border-right: 1px solid #e0e0e0; /* Optional: Add a subtle separator line */
     box-shadow: 2px 0 5px rgba(0, 0, 0, 0.05); /* Optional: Soft shadow for depth */
-    color: #333333; /* Default text color (dark gray for legibility) */
+    color: #333; /* Default text color (dark gray for legibility) */
 }
 
 /* Ensure headings/titles in the sidebar are also dark and legible */
@@ -43,7 +43,7 @@ div.sphinxsidebar li.toctree-l2.current > a {
 
 /* Ensure the link text for all navigation items is dark */
 div.sphinxsidebar ul li a {
-    color: #333333;
+    color: #333;
     padding-left: 8px; /* Standard padding */
 }
 
@@ -51,9 +51,9 @@ div.sphinxsidebar ul li a {
 
 /* Ensure the text inside the search box is dark and readable */
 #searchbox input[type="text"] {
-    color: #333333;
-    border: 1px solid #cccccc;
-    background-color: #ffffff;
+    color: #333;
+    border: 1px solid #ccc;
+    background-color: #fff;
 }
 
 /* Sidebar */

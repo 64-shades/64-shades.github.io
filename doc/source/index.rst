@@ -26,6 +26,16 @@ documentation for details.
 
 .. toctree::
    :maxdepth: 2
-   :caption: About
+   :caption: Club History
 
-   games
+   club-history.rst
+
+.. toctree::
+   :maxdepth: 2
+   :caption: Game Catalog
+
+   game-catalog/standard-2-player-chess.rst
+   game-catalog/standard-4-player-chess.rst
+   game-catalog/quaternity-4-player-chess.rst
+   game-catalog/harmegedo-6-player-chess.rst
+   game-catalog/chinese-checkers.rst
