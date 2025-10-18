@@ -3,7 +3,7 @@
 const BG_MAP = {
     "shades-documentation": "default_bg.jpg",
     "first-event":          "first-event-second-game.jpg",
-    "second-event":         "sam-loyds-puzzle-book.jpg",
+    "second-event":         "second-event.jpg",
     "game-catalog":         "the-life-and-games-of-mikhail-tal.jpg",
     "the-first-challenger":  "first-event-first-game.jpg",
     // Add more page IDs and their image paths here
