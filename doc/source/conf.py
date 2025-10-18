@@ -42,5 +42,3 @@ html_theme_options = {
     "github_button": True,  # This enables the GitHub button feature
     "github_type": "fork",  # Use 'watch' for the Star button
 }
-
-notfound_urls_prefix = "/"
