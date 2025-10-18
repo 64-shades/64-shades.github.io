@@ -1,11 +1,11 @@
 
 // Map page IDs to their corresponding background image URLs
 const BG_MAP = {
-    "shades-documentation": "default_bg.jpg",
+    "welcome-to-the-official-64-shades-world-chess-team-and-games-club": "default_bg.jpg",
     "first-event":          "first-event-second-game.jpg",
     "second-event":         "second-event.jpg",
-    "game-catalog":         "the-life-and-games-of-mikhail-tal.jpg",
-    "the-first-challenger":  "first-event-first-game.jpg",
+    "quaternity":           "quaternity-wooden-set.jpg",
+    "the-first-challenger": "first-event-first-game.jpg",
     // Add more page IDs and their image paths here
 };
 
