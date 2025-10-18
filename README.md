@@ -43,6 +43,10 @@ This site is built using ...
   of a document written in a markup language, most commonly HTML. It is a fundamental technology of the World Wide Web,
   working alongside HTML and JavaScript to create interactive and visually appealing websites.
 
+### Requirements
+
+- [Python](https://www.python.org/) is a programming language that lets you work quickly and integrate systems more effectively. 
+
 ---
 
 ### Build the Documentation
