@@ -3,8 +3,11 @@
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
-64 Shades documentation
-=======================
+Welcome to the Official 64 Shades World Chess Team and Games Club 🀄 🃏 ♟️ 🎲 🕹️
+=================================================================================
+
+64 Shades is a team of cutting-edge chess and games players who also love open-source on GitHub.
+We’re here to celebrate the global game of chess and board games, with a vibrant, tech-loving community.
 
 Add your content using ``reStructuredText`` syntax. See the
 `reStructuredText <https://www.sphinx-doc.org/en/master/usage/restructuredtext/index.html>`_
@@ -34,8 +37,8 @@ documentation for details.
    :maxdepth: 2
    :caption: Game Catalog
 
-   game-catalog/standard-2-player-chess.rst
-   game-catalog/standard-4-player-chess.rst
-   game-catalog/quaternity-4-player-chess.rst
-   game-catalog/harmegedo-6-player-chess.rst
-   game-catalog/chinese-checkers.rst
+   chess.rst
+   4-player-chess.rst
+   quaternity.rst
+   harmegedo.rst
+   chinese-checkers.rst
