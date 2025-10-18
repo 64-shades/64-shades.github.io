@@ -9,7 +9,7 @@ Welcome to the Official 64 Shades World Chess Team and Games Club 🀄 🃏 ♟�
 64 Shades is a team of cutting-edge chess and games players who also love open-source on GitHub.
 We’re here to celebrate the global game of chess and board games, with a vibrant, tech-loving community.
 
-
+Join us on `lichess <https://lichess.org/team/64-shades>`_ to play, grow, and contribute together.
 
 Add your content using ``reStructuredText`` syntax. See the
 `reStructuredText <https://www.sphinx-doc.org/en/master/usage/restructuredtext/index.html>`_
@@ -40,7 +40,13 @@ documentation for details.
    :caption: Game Catalog
 
    chess.rst
-   4-player-chess.rst
-   quaternity.rst
-   harmegedo.rst
-   chinese-checkers.rst
+   4-player-chess
+   quaternity
+   harmegedo
+   chinese-checkers
+
+.. toctree::
+   :maxdepth: 2
+   :caption: Game Rules
+
+   quaternity-rules

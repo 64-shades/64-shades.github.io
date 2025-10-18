@@ -13,7 +13,9 @@ author = "64 Shades"
 # -- General configuration ---------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#general-configuration
 
-extensions = []  # type: ignore
+extensions = [
+    "notfound.extension",
+]  # type: ignore
 
 templates_path = ["_templates"]
 exclude_patterns = []  # type: ignore
