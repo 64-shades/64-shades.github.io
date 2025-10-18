@@ -40,7 +40,13 @@ documentation for details.
    :caption: Game Catalog
 
    chess.rst
-   4-player-chess.rst
-   quaternity.rst
-   harmegedo.rst
-   chinese-checkers.rst
+   4-player-chess
+   quaternity
+   harmegedo
+   chinese-checkers
+
+.. toctree::
+   :maxdepth: 2
+   :caption: Game Rules
+
+   quaternity-rules
