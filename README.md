@@ -45,7 +45,7 @@ This site is built using ...
 
 ### Requirements
 
-- [Python](https://www.python.org/) is a programming language that lets you work quickly and integrate systems more effectively. 
+- [Python](https://www.python.org/) is a programming language that lets you work quickly and integrate systems more effectively.
 
 ---
 

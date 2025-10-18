@@ -1,6 +1,6 @@
-docutils==0.22.2
-myst-parser==4.0.1
-sphinx==8.2.3
-sphinx-intl==2.3.2
-sphinx-markdown-tables==0.0.17
-sphinx_rtd_theme==3.0.2
+docutils
+myst-parser
+sphinx
+sphinx-intl
+sphinx-markdown-tables
+sphinx_rtd_theme

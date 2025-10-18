@@ -13,7 +13,9 @@ author = "64 Shades"
 # -- General configuration ---------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#general-configuration
 
-extensions = []  # type: ignore
+extensions = [
+    "notfound.extension",
+]  # type: ignore
 
 templates_path = ["_templates"]
 exclude_patterns = []  # type: ignore
@@ -33,3 +35,10 @@ html_js_files = [
     "js/page_background.js",
     # Keep any other JS files here
 ]
+
+html_theme_options = {
+    "github_user": "64-shades",
+    "github_repo": "64-shades.github.io",
+    "github_button": True,  # This enables the GitHub button feature
+    "github_type": "fork",  # Use 'watch' for the Star button
+}
