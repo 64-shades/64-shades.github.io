@@ -10,5 +10,12 @@ Seven separate rule book pages:
 `Five <_static/images/quaternity/quaternity-rule-book-5.jpg>`_
 `Six <_static/images/quaternity/quaternity-rule-book-6.jpg>`_
 `Seven <_static/images/quaternity/quaternity-rule-book-7.jpg>`_
+`All <_static/images/quaternity/quaternity-rules.jpg>`_
 
-.. image:: _static/images/quaternity/quaternity-rules.jpg
+.. image:: _static/images/quaternity/quaternity-rule-book-1.jpg
+.. image:: _static/images/quaternity/quaternity-rule-book-2.jpg
+.. image:: _static/images/quaternity/quaternity-rule-book-3.jpg
+.. image:: _static/images/quaternity/quaternity-rule-book-4.jpg
+.. image:: _static/images/quaternity/quaternity-rule-book-5.jpg
+.. image:: _static/images/quaternity/quaternity-rule-book-6.jpg
+.. image:: _static/images/quaternity/quaternity-rule-book-7.jpg
