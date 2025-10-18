@@ -1,11 +1,11 @@
 
 // Map page IDs to their corresponding background image URLs
 const BG_MAP = {
-    "welcome-to-the-official-64-shades-world-chess-team-and-games-club": "default_bg.jpg",
-    "first-event":          "first-event-second-game.jpg",
-    "second-event":         "second-event.jpg",
-    "quaternity":           "quaternity-wooden-set.jpg",
-    "the-first-challenger": "first-event-first-game.jpg",
+    "welcome-to-the-official-64-shades-world-chess-team-and-games-club": "the-big-issue",
+    "first-event":          "first-event-second-game",
+    "second-event":         "second-event",
+    "quaternity":           "quaternity-wooden-set",
+    "the-first-challenger": "first-event-first-game",
     // Add more page IDs and their image paths here
 };
 
@@ -23,7 +23,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
         if (bgUrl) {
             // 4. Apply the background style to the <body> tag
-            document.body.style.backgroundImage = `url('_static/images/${bgUrl}')`;
+            document.body.style.backgroundImage = `url('_static/images/${bgUrl}.jpg')`;
             document.body.style.backgroundSize = 'cover';
             document.body.style.backgroundAttachment = 'fixed';
             // Optional: You might need to set the background of the main content wrapper to transparent
