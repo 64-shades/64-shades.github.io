@@ -51,6 +51,7 @@ Run the following commands from the repository root to create the Sphinx documen
 
 ```shell
 cd doc
+pip install -r requirements-docs.txt
 make html
 ```
 
