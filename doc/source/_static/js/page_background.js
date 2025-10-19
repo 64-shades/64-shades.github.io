@@ -3,6 +3,7 @@
 const BG_MAP = {
     "welcome-to-the-official-64-shades-world-chess-team-and-games-club": "the-big-issue",
     "first-event":          "first-event-second-game",
+    "harmegedo":            "harmegedo",
     "second-event":         "second-event",
     "quaternity":           "quaternity-wooden-set",
     "the-first-challenger": "first-event-first-game",
@@ -23,7 +24,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
         if (bgUrl) {
             // 4. Apply the background style to the <body> tag
-            document.body.style.backgroundImage = `url('_static/images/${bgUrl}.jpg')`;
+            document.body.style.backgroundImage = `url('_static/images/backgrounds/${bgUrl}.jpg')`;
             document.body.style.backgroundSize = 'cover';
             document.body.style.backgroundAttachment = 'fixed';
             // Optional: You might need to set the background of the main content wrapper to transparent
