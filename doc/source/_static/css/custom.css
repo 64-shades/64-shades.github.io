@@ -1,73 +1,122 @@
-/* --- 1. Set the Sidebar Background and Text Color --- */
+/* --- 1. Define CSS Variables for Light and Dark Themes --- */
+
+/* Light Theme Variables (Default) */
+:root,
+body.light-theme {
+    /* Primary Colors */
+    --text-color: #333;             /* Dark Gray */
+    --heading-color: #1a1a1a;        /* Very Dark Gray */
+    --main-bg-color: #fff;          /* White */
+    --sidebar-bg-color: rgba(255, 255, 255, 0.9); /* White (Slight transparency) */
+    --border-color: #e0e0e0;        /* Light Gray Border */
+    --link-color: #007bff;          /* Blue Link */
+    --link-hover-color: #0056b3;    /* Darker Blue */
+    --current-link-color: #1a1a1a;  /* Current Link Black */
+    --search-bg-color: #fff;        /* Search Box White */
+    --footer-bg-color: #000;        /* Footer Black */
+    --footer-text-color: #fff;      /* Footer White */
+}
+
+/* Dark Theme Variables */
+body.dark-theme {
+    /* Primary Colors */
+    --text-color: #c9c9c9;          /* Light Gray */
+    --heading-color: #f0f0f0;       /* Off-White */
+    --main-bg-color: #282c34;       /* Charcoal Main Background */
+    --sidebar-bg-color: rgba(40, 44, 52, 0.9); /* Charcoal (Slight transparency) */
+    --border-color: #3e4451;        /* Darker Border */
+    --link-color: #92b0ff;          /* Light Blue Link */
+    --link-hover-color: #a8c1ff;    /* Lighter Blue */
+    --current-link-color: #ffffff;  /* Current Link White */
+    --search-bg-color: #3e4451;     /* Search Box Dark Gray */
+    --footer-bg-color: #1a1a1a;     /* Footer Dark Gray */
+    --footer-text-color: #c9c9c9;   /* Footer Light Gray */
+}
+
+/* --- 2. Apply Variables to Global Elements --- */
+
+/* Apply to the main body and body wrapper */
+body {
+    color: var(--text-color);
+    background-color: var(--main-bg-color); /* Fallback if no background image */
+    transition: background-color 0.3s, color 0.3s;
+}
+
+/* Ensure headings use the heading color */
+h1, h2, h3, h4, h5, h6,
+div.document > h1, div.document > h2, div.document > h3 {
+    color: var(--heading-color);
+}
+
+/* --- 3. Sidebar Styling --- */
 
 /* Target the main sidebar wrapper */
 div.sphinxsidebar {
-    background: #fff; /* Pure white background */
-    border-right: 1px solid #e0e0e0; /* Optional: Add a subtle separator line */
-    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.05); /* Optional: Soft shadow for depth */
-    color: #333; /* Default text color (dark gray for legibility) */
+    background: var(--sidebar-bg-color) !important;
+    border-right: 1px solid var(--border-color);
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.2); /* Keep shadow dark */
+    color: var(--text-color);
+    transition: background-color 0.3s, color 0.3s;
 }
 
-/* Ensure headings/titles in the sidebar are also dark and legible */
+/* Sidebar Headings */
 div.sphinxsidebar h1,
 div.sphinxsidebar h3 {
-    color: #1a1a1a; /* Very dark text for headings */
+    color: var(--heading-color);
 }
 
-
-/* --- 2. Ensure Link Legibility (Most Important) --- */
-
-/* Target all normal links in the sidebar */
+/* Sidebar Normal Links */
 div.sphinxsidebar a {
-    color: #007bff; /* Standard blue link color, stands out on white */
-    text-decoration: none; /* Optional: Remove default underline */
+    color: var(--link-color);
+    text-decoration: none;
 }
 
-/* Change link color on hover for feedback */
+/* Sidebar Links on Hover */
 div.sphinxsidebar a:hover {
-    color: #0056b3; /* Darker blue on hover */
-    text-decoration: underline; /* Add underline on hover */
+    color: var(--link-hover-color);
+    text-decoration: underline;
 }
 
-/* --- 3. Fix Current/Active Navigation Links --- */
-
-/* This targets the currently active page link in the navigation */
+/* Fix Current/Active Navigation Links */
 div.sphinxsidebar li.toctree-l1.current > a,
 div.sphinxsidebar li.toctree-l2.current > a {
     font-weight: bold;
-    color: #1a1a1a !important; /* Make the current page link black/very dark */
-    /* Add a subtle indicator for the active link */
-    border-left: 3px solid #007bff;
-    padding-left: 5px; /* Adjust padding due to the new border */
+    color: var(--current-link-color) !important;
+    border-left: 3px solid var(--link-color); /* Use the standard link color for the border */
+    padding-left: 5px;
 }
 
-/* Ensure the link text for all navigation items is dark */
+/* Ensure the link text for all navigation items is dark/correct */
 div.sphinxsidebar ul li a {
-    color: #333;
-    padding-left: 8px; /* Standard padding */
+    color: var(--text-color);
+    padding-left: 8px;
 }
 
-/* --- 4. Fix Search Box Text --- */
+/* --- 4. Search Box Text --- */
 
-/* Ensure the text inside the search box is dark and readable */
 #searchbox input[type="text"] {
-    color: #333;
-    border: 1px solid #ccc;
-    background-color: #fff;
+    color: var(--text-color);
+    border: 1px solid var(--border-color);
+    background-color: var(--search-bg-color);
 }
 
-/* Sidebar */
-div.sphinxsidebar {
-    /* White with 80% opacity */
-    background-color: rgba(255, 255, 255, 0.8) !important;
-}
-
-/* Optional: For narrow/mobile view sidebar */
-.narrow-sidebar {
-    /* White with 80% opacity */
-    background-color: rgba(255, 255, 255, 0.8) !important;
-}
+/* --- 5. Footer Styling --- */
 
 .footer {
-    background: black;
+    background: var(--footer-bg-color);
+    color: var(--footer-text-color);
+}
+
+.footer a {
+    color: var(--link-color);
+}
+
+/* --- 6. Content Wrapper for Background Image Setting --- */
+/* When background is ON, bodywrapper background is set to transparent by JS. */
+/* When background is OFF, bodywrapper uses the main-bg-color (light/dark). */
+
+.bodywrapper {
+    background-color: var(--main-bg-color);
+    /* Transition to smooth the background change when toggling background image */
+    transition: background-color 0.3s;
 }
