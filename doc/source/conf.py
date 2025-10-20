@@ -15,7 +15,14 @@ author = "64 Shades"
 
 extensions = [
     "notfound.extension",
+    "sphinxext.opengraph",
 ]  # type: ignore
+
+# Open Graph extension configuration
+ogp_site_url = "https://Subham-KRLX.github.io/"  # Replace with your actual docs URL
+
+ogp_description_length = 200  # Optional, number of characters to use for descriptions
+ogp_type = "website"          # Optional, type of page (usually 'website' for docs)
 
 # NOTE: We keep templates_path to ensure our new template is found
 templates_path = ["_templates"]
