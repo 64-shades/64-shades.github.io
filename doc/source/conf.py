@@ -19,6 +19,10 @@ extensions = [
     "notfound.extension",
 ]  # type: ignore
 
+# Open Graph metadata via sphinxext-opengraph
+# Enables automatic generation of social preview meta tags (og:*)
+extensions.append("sphinxext.opengraph")
+
 # NOTE: We keep templates_path to ensure our new template is found
 templates_path = ["_templates"]
 exclude_patterns = []  # type: ignore
@@ -61,3 +65,12 @@ html_theme_options = {
     "github_type": "fork",  # Use 'watch' for the Star button
     # REMOVED: The extra_nav_links are now placed directly via the template file
 }
+
+# -- Open Graph / social metadata -----------------------------------------
+# Point to the live documentation site so previews link to the published pages.
+# Use the GitHub Pages URL for this repository's docs site.
+ogp_site_url = "https://64-shades.github.io/"
+# How many characters of the page body to use as the og:description (optional)
+ogp_description_length = 200
+# Default Open Graph object type
+ogp_type = "website"

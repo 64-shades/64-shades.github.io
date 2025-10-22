@@ -6,3 +6,6 @@ sphinx-intl
 sphinx-markdown-tables
 sphinx-notfound-page
 sphinx_rtd_theme
+
+sphinxext-opengraph
+matplotlib
