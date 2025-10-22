@@ -28,6 +28,7 @@ documentation for details.
 
    first-event
    second-event
+   third-event
 
 .. toctree::
    :maxdepth: 2

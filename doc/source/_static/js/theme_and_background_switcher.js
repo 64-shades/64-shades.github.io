@@ -3,10 +3,11 @@ const BG_MAP = {
     "welcome-to-the-official-64-shades-world-chess-team-and-games-club": "the-big-issue",
     "first-event":          "first-event-second-game",
     "harmegedo":            "harmegedo",
+    "history-of-64-shades": "history",
     "second-event":         "second-event",
     "quaternity":           "quaternity-wooden-set",
     "the-first-challenger": "first-event-first-game",
-    // Add more page IDs and their image paths here
+    "third-event":          "third-event-beers-in-play"
 };
 
 const THEME_KEY = 'sphinx_theme_preference';
