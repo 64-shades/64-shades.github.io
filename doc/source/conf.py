@@ -19,7 +19,7 @@ extensions = [
 ]  # type: ignore
 
 # Open Graph extension configuration
-ogp_site_url = "https://Subham-KRLX.github.io/"  # Replace with your actual docs URL
+ogp_site_url = "https://github.com/64-shades/64-shades.github.io/pull/214/files"  # Replace with your actual docs URL
 
 ogp_description_length = 200  # Optional, number of characters to use for descriptions
 ogp_type = "website"          # Optional, type of page (usually 'website' for docs)
