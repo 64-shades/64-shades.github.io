@@ -120,3 +120,7 @@ div.sphinxsidebar ul li a {
     /* Transition to smooth the background change when toggling background image */
     transition: background-color 0.3s;
 }
+
+#rellinks {
+    background-color: orange;
+}
