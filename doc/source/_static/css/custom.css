@@ -125,3 +125,37 @@ div.sphinxsidebar ul li a {
 #rellinks {
     background-color: orange;
 }
+
+/* --- New 7. Random Theme Overrides --- */
+
+/* Define the new CSS variables for random colors (they will be set via JS) */
+:root {
+    --random-main-bg-color: #282c34;     /* Default Dark */
+    --random-text-color: #c9c9c9;        /* Default Light Gray */
+    --random-heading-color: #ffffff;     /* Default White */
+    --random-link-color: #92b0ff;        /* Default Blue */
+    --random-link-hover-color: #a8c1ff;
+    --random-sidebar-bg-color: rgba(40, 44, 52, 0.9);
+    --random-border-color: #3e4451;
+    --random-footer-bg-color: #1a1a1a;
+}
+
+/* Apply the custom random variables when the body has the custom-random-theme class */
+body.custom-random-theme {
+    /* Primary Colors */
+    --text-color: var(--random-text-color);
+    --heading-color: var(--random-heading-color);
+    --main-bg-color: var(--random-main-bg-color);
+    --sidebar-bg-color: var(--random-sidebar-bg-color);
+    --border-color: var(--random-border-color);
+    --link-color: var(--random-link-color);
+    --link-hover-color: var(--random-link-hover-color);
+    --current-link-color: var(--random-heading-color); /* Use a bright color */
+    --search-bg-color: var(--random-border-color); /* Use a darker color */
+    --footer-bg-color: var(--random-footer-bg-color);
+    --footer-text-color: var(--random-text-color);
+}
+/* Ensure the bodywrapper also uses the random background color if background image is off */
+body.custom-random-theme .bodywrapper {
+    background-color: var(--random-main-bg-color);
+}
