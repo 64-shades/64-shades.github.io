@@ -124,3 +124,22 @@ div.sphinxsidebar ul li a {
 #rellinks {
     background-color: orange;
 }
+
+/* Custom CSS for logo styling */
+
+/* Style the logo image itself */
+img.logo {
+    /* Border: 3px solid a soft orange color */
+    border: 3px solid #ffaa00; /* Example soft orange color */
+    border-radius: 5px; /* Optional: for slightly rounded corners */
+
+    /* Transition for the shadow effect */
+    transition: box-shadow 0.3s ease-in-out;
+}
+
+/* Add the soft orange shadow on hover */
+img.logo:hover {
+    /* Box-shadow: H-offset V-offset Blur Spread Color */
+    /* Adjust values and color (#ffaa00 is soft orange) as needed */
+    box-shadow: 0 0 10px 2px rgba(255, 170, 0, 0.7);
+}
