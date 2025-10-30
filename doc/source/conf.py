@@ -53,5 +53,6 @@ html_theme_options = {
     "github_repo": "64-shades.github.io",
     "github_button": True,  # This enables the GitHub button feature
     "github_type": "fork",  # Use 'watch' for the Star button
-    # REMOVED: The extra_nav_links are now placed directly via the template file
+    "show_relbar_top": False,
+    "show_relbar_bottom": True,
 }
