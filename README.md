@@ -30,22 +30,22 @@ This site is built using ...
 
 ### Framework
 
-- [Sphinx](https://www.sphinx-doc.org/en/master/) is a powerful and widely-used documentation generator written in Python. It is particularly popular
-  within the Python community and is considered the de facto standard for documenting Python projects.
+- [CSS](https://en.wikipedia.org/wiki/CSS), or Cascading Style Sheets, is a stylesheet language used to describe the presentation and styling
+  of a document written in a markup language, most commonly HTML. It is a fundamental technology of the World Wide Web,
+  working alongside HTML and JavaScript to create interactive and visually appealing websites.
+- [HTML](https://en.wikipedia.org/wiki/HTML), or Hypertext Markup Language, is the standard language for creating web pages and structuring their content. It uses tags to define elements like headings, paragraphs, and images, telling a web browser how    to display them. HTML is the foundational building block of the internet, providing the structure that is then styled with languages like CSS and made interactive with JavaScript.  
+- [JavaScript](https://en.wikipedia.org/wiki/JavaScript) is a programming language and core technology of the web platform, alongside HTML and CSS.
+  Ninety-nine percent of websites on the World Wide Web use JavaScript on the client side for webpage behavior.
+  Web browsers have a dedicated JavaScript engine that executes the client code.
+- [Makefiles](https://en.wikipedia.org/wiki/Make_(software)) are text files that contain instructions for the make utility, a build automation tool commonly used in Unix-like operating systems. They define how to build or update target files (like executables or libraries) from source files,
+  managing dependencies and executing commands.
+- [Python](https://www.python.org/) is a programming language that lets you work quickly and integrate systems more effectively.
 - [reStructuredText (RST)](https://www.sphinx-doc.org/en/master/usage/restructuredtext/basics.html) is a lightweight markup language designed for creating easy-to-read and easy-to-write
   plaintext documents that can be automatically converted to various output formats, such as HTML, LaTeX (and thus PDF),
   and more. It is a key component of the Docutils project and is widely used in the Python community for writing
   technical documentation, including Python's official documentation and documentation for many Python libraries.
-- [JavaScript](https://en.wikipedia.org/wiki/JavaScript) is a programming language and core technology of the web platform, alongside HTML and CSS.
-  Ninety-nine percent of websites on the World Wide Web use JavaScript on the client side for webpage behavior.
-  Web browsers have a dedicated JavaScript engine that executes the client code.
-- [CSS](https://en.wikipedia.org/wiki/CSS), or Cascading Style Sheets, is a stylesheet language used to describe the presentation and styling
-  of a document written in a markup language, most commonly HTML. It is a fundamental technology of the World Wide Web,
-  working alongside HTML and JavaScript to create interactive and visually appealing websites.
-
-### Requirements
-
-- [Python](https://www.python.org/) is a programming language that lets you work quickly and integrate systems more effectively.
+- [Sphinx](https://www.sphinx-doc.org/en/master/) is a powerful and widely-used documentation generator written in Python. It is particularly popular
+  within the Python community and is considered the de facto standard for documenting Python projects.
 
 ---
 
@@ -58,6 +58,8 @@ cd doc
 pip install -r requirements-docs.txt
 make html
 ```
+
+For hot reloading on Nix like OS run `make livehtml`
 
 The generated HTML site will be in the `doc/build/html` folder.
 You can open the HTML files with your web browser.
