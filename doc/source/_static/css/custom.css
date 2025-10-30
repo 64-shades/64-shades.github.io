@@ -122,6 +122,10 @@ div.sphinxsidebar ul li a {
     transition: background-color 0.3s;
 }
 
+body.dark-theme .bodywrapper .body {
+    --heading-color: black;
+}
+
 #rellinks {
     background-color: orange;
 }
@@ -160,3 +164,17 @@ body.custom-random-theme .bodywrapper {
     background-color: var(--random-main-bg-color);
 }
 
+/* --- New 8. Custom Vertical Orange Gradient for bodywrapper --- */
+
+/* Target the bodywrapper element for the gradient background */
+.bodywrapper .body {
+    background-image: linear-gradient(
+        to bottom,
+        #FFF3E0 0%,      /* Very Light Orange / Creamy */
+        #FFB74D 50%,      /* Medium Orange */
+        #E65100 100%      /* Dark Orange */
+    ) !important;
+
+    /* Fallback color for non-supporting browsers */
+    background-color: #E65100;
+}
