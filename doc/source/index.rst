@@ -32,9 +32,15 @@ documentation for details.
 
 .. toctree::
    :maxdepth: 2
-   :caption: Club History
+   :caption: History
 
    club-history.rst
+
+.. toctree::
+   :maxdepth: 2
+   :caption: Chess Gems
+
+   top-novice-pitfalls.rst
 
 .. toctree::
    :maxdepth: 2
