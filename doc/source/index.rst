@@ -11,19 +11,6 @@ We’re here to celebrate global games, with a vibrant, tech-loving community.
 
 .. note:: Other than event and games content this site teaches you to move as fast as you can at the speed of light with a special story about mathematics and physics. You will sometimes see snippets of wisdom at the top and or bottom of pages with various facts and figures.
 
-.. topic:: Physics
-
-   .. important:: Physics is all around us, its about motion, forces, going as fast as light and about everything in the natural world we live in.
-
-.. topic:: Measurement
-
-   .. important:: Units of Measurement: CGS, MKS and FPI are measurement systems used by mathematicians and physicists. Centimeter-gram-second and meter-kilogram-second systems are called SI and MKS is the most popular system. Foot-Pound-Inch measurements or FPI are a system of units for torque used in engineering tasks with turning forces.
-
-   .. tip:: A queen can cover at most 27 squares on a chessboard when placed on one of the four central squares.
-
-   .. seealso:: `Eight queens puzzle <https://en.wikipedia.org/wiki/Eight_queens_puzzle>`_
-
-
 .. toctree::
    :maxdepth: 2
    :caption: Contents
