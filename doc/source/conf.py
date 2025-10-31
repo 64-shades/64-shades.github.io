@@ -48,6 +48,7 @@ html_sidebars = {
         "searchbox.html",  # Default: Search box
         "sidebar_theme_switcher.html",  # CUSTOM: Our new template for the switcher
         "sidebar_lichess_puzzle.html",
+        "sidebar_we_support.html",
     ]
 }
 
