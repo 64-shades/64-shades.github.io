@@ -88,7 +88,7 @@ div.sphinxsidebar li.toctree-l2.current > a {
 }
 
 /* Ensure the link text for all navigation items is dark/correct */
-div.sphinxsidebar ul li a {
+div.sphinxsidebar ul li a, div.sphinxsidebar p {
     color: var(--text-color);
     padding-left: 8px;
 }
