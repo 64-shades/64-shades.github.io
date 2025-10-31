@@ -6,7 +6,7 @@
 Welcome to the Official 64 Shades World Chess Team and Games Club 🀄 🃏 ♟️ 🎲 🕹️
 =================================================================================
 
-64 Shades is a team of cutting-edge teachers and game players who also love open-source on GitHub.
+64 Shades is a team of cutting-edge game teachers and players who also love open-source on GitHub.
 We’re here to celebrate global games, with a vibrant, tech-loving community.
 
 .. note:: Other than event and games content this site teaches you to move as fast as you can at the speed of light with a special story about mathematics and physics. You will sometimes see snippets of wisdom at the top and or bottom of pages with various facts and figures.
@@ -33,12 +33,6 @@ We’re here to celebrate global games, with a vibrant, tech-loving community.
 
 .. toctree::
    :maxdepth: 2
-   :caption: Chess Gems
-
-   top-novice-pitfalls.rst
-
-.. toctree::
-   :maxdepth: 2
    :caption: Game Catalog
 
    chess.rst
@@ -52,3 +46,9 @@ We’re here to celebrate global games, with a vibrant, tech-loving community.
    :caption: Game Rules
 
    quaternity-rules
+
+.. toctree::
+   :maxdepth: 2
+   :caption: Chess Gems
+
+   top-novice-pitfalls.rst
