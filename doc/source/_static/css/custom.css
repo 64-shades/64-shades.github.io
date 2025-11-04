@@ -21,7 +21,7 @@ body.light-theme {
 body.dark-theme {
     /* Primary Colors */
     --text-color: #c9c9c9;          /* Light Gray */
-    --heading-color: #f0f0f0;       /* Off-White */
+    --heading-color: red;   /* Off-White */
     --main-bg-color: #282c34;       /* Charcoal Main Background */
     --sidebar-bg-color: rgba(40, 44, 52, 0.9); /* Charcoal (Slight transparency) */
     --border-color: #3e4451;        /* Darker Border */
@@ -61,7 +61,8 @@ div.sphinxsidebar {
 
 /* Sidebar Headings */
 div.sphinxsidebar h1,
-div.sphinxsidebar h3 {
+div.sphinxsidebar h3,
+div.sphinxsidebar .caption {
     color: var(--heading-color);
 }
 
@@ -87,7 +88,7 @@ div.sphinxsidebar li.toctree-l2.current > a {
 }
 
 /* Ensure the link text for all navigation items is dark/correct */
-div.sphinxsidebar ul li a {
+div.sphinxsidebar ul li a, div.sphinxsidebar p {
     color: var(--text-color);
     padding-left: 8px;
 }
@@ -119,4 +120,61 @@ div.sphinxsidebar ul li a {
     background-color: var(--main-bg-color);
     /* Transition to smooth the background change when toggling background image */
     transition: background-color 0.3s;
+}
+
+body.dark-theme .bodywrapper .body {
+    --heading-color: black;
+}
+
+#rellinks {
+    background-color: orange;
+}
+
+/* --- New 7. Random Theme Overrides --- */
+
+/* Define the new CSS variables for random colors (they will be set via JS) */
+:root {
+    --random-main-bg-color: #282c34;     /* Default Dark */
+    --random-text-color: #c9c9c9;        /* Default Light Gray */
+    --random-heading-color: #ffffff;     /* Default White */
+    --random-link-color: #92b0ff;        /* Default Blue */
+    --random-link-hover-color: #a8c1ff;
+    --random-sidebar-bg-color: rgba(40, 44, 52, 0.9);
+    --random-border-color: #3e4451;
+    --random-footer-bg-color: #1a1a1a;
+}
+
+/* Apply the custom random variables when the body has the custom-random-theme class */
+body.custom-random-theme {
+    /* Primary Colors */
+    --text-color: var(--random-text-color);
+    --heading-color: var(--random-heading-color);
+    --main-bg-color: var(--random-main-bg-color);
+    --sidebar-bg-color: var(--random-sidebar-bg-color);
+    --border-color: var(--random-border-color);
+    --link-color: var(--random-link-color);
+    --link-hover-color: var(--random-link-hover-color);
+    --current-link-color: var(--random-heading-color); /* Use a bright color */
+    --search-bg-color: var(--random-border-color); /* Use a darker color */
+    --footer-bg-color: var(--random-footer-bg-color);
+    --footer-text-color: var(--random-text-color);
+}
+/* Ensure the bodywrapper also uses the random background color if background image is off */
+body.custom-random-theme .bodywrapper {
+    background-color: var(--random-main-bg-color);
+}
+
+/* --- New 8. Custom Vertical Orange Gradient for bodywrapper --- */
+
+/* Target the bodywrapper element for the gradient background */
+.bodywrapper .body {
+    background-image: linear-gradient(
+        to bottom,
+        #FFF3E0 0%,      /* Very Light Orange / Creamy */
+        #FFB74D 50%,      /* Medium Orange */
+        #E65100 100%      /* Dark Orange */
+    ) !important;
+
+    /* Fallback color for non-supporting browsers */
+    background-color: #E65100;
 }

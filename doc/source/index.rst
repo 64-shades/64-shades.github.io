@@ -6,19 +6,14 @@
 Welcome to the Official 64 Shades World Chess Team and Games Club 🀄 🃏 ♟️ 🎲 🕹️
 =================================================================================
 
-64 Shades is a team of cutting-edge chess and games players who also love open-source on GitHub.
-We’re here to celebrate the global game of chess and board games, with a vibrant, tech-loving community.
+64 Shades is a team of cutting-edge game teachers and players who also love open-source on GitHub.
+We’re here to celebrate global games, with a vibrant, tech-loving community.
 
-Join us on `lichess <https://lichess.org/team/64-shades>`_ to play, grow, and contribute together.
-
-Add your content using ``reStructuredText`` syntax. See the
-`reStructuredText <https://www.sphinx-doc.org/en/master/usage/restructuredtext/index.html>`_
-documentation for details.
-
+.. note:: Other than event and games content this site teaches you to move as fast as you can at the speed of light with a special story about mathematics and physics. You will sometimes see snippets of wisdom at the top and or bottom of pages with various facts and figures.
 
 .. toctree::
    :maxdepth: 2
-   :caption: Contents:
+   :caption: Contents
 
    the-first-challenger
 
@@ -28,10 +23,11 @@ documentation for details.
 
    first-event
    second-event
+   third-event
 
 .. toctree::
    :maxdepth: 2
-   :caption: Club History
+   :caption: History
 
    club-history.rst
 
@@ -50,3 +46,9 @@ documentation for details.
    :caption: Game Rules
 
    quaternity-rules
+
+.. toctree::
+   :maxdepth: 2
+   :caption: Chess Gems
+
+   top-novice-pitfalls.rst
