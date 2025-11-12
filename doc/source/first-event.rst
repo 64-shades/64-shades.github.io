@@ -19,3 +19,15 @@ older man we played classical and he resigned.
 I also met 4 other Hotel workers including Dylan a bar worker,
 Ryan and Zach both managers and Zara a waitress.
 I ordered a lemonade.
+
+.. topic:: Physics
+
+   .. important:: Newton's first law of motion states that an object will remain at rest or continue to move in a straight line at a constant speed unless acted upon by an unbalanced external force.
+
+.. topic:: Measurement
+
+   .. important:: .. image:: _static/images/content/puzzle-1.jpg
+
+   .. tip:: Sam Loyd devised the shortest possible chess game ending in stalemate just ten moves long: ``1.e3 a5 2.Qh5 Ra6 3.Qxa5 h5 4.Qxc7 Rah6 5.h4 f6 6.Qxd7+ Kf7 7.Qxb7 Qd3 8.Qxb8 Qh7 9.Qxc8 Kg6 10.Qe6``
+
+   .. seealso:: `Human chess <https://en.wikipedia.org/wiki/Human_chess>`__, living chess or live chess is a form of chess in which people take the place of pieces.
