@@ -178,3 +178,8 @@ body.custom-random-theme .bodywrapper {
     /* Fallback color for non-supporting browsers */
     background-color: #E65100;
 }
+
+div.body {
+    padding-left: 40px;
+    padding-right: 40px;
+}
