@@ -1,3 +1,4 @@
+# pylint: disable=invalid-name,redefined-builtin,missing-module-docstring
 # Configuration file for the Sphinx documentation builder.
 #
 # For the full list of built-in configuration values, see the documentation:
@@ -19,12 +20,6 @@ extensions = [
     "notfound.extension",
     "sphinxext.opengraph",
 ]  # type: ignore
-
-# Open Graph extension configuration
-# Point to the live documentation site so previews link to the published pages.
-ogp_site_url = "https://64-shades.github.io/"
-ogp_description_length = 200  # Optional, number of characters to use for descriptions
-ogp_type = "website"          # Optional, type of page (usually 'website' for docs)
 
 # NOTE: We keep templates_path to ensure our new template is found
 templates_path = ["_templates"]
