@@ -9,7 +9,9 @@ Welcome to the Official 64 Shades World Chess Team and Games Club 🀄 🃏 ♟�
 64 Shades is a team of cutting-edge game teachers and players who also love open-source on GitHub.
 We’re here to celebrate global games, with a vibrant, tech-loving community.
 
-.. note:: Other than event and games content this site teaches you to move as fast as you can at the speed of light with a special story about mathematics and physics. You will sometimes see snippets of wisdom at the top and or bottom of pages with various facts and figures.
+.. note:: Other than event and games content this site teaches you to move as fast as you can at the speed of light
+          with a special story about life, mathematics and puzzles. You will sometimes see snippets of wisdom at the top and or bottom
+          of pages with various facts and figures.
 
 .. toctree::
    :maxdepth: 2
