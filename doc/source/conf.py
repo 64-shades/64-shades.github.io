@@ -23,6 +23,7 @@ extensions = [
 templates_path = ["_templates"]
 exclude_patterns = []  # type: ignore
 
+nitpicky = True
 
 # -- Options for HTML output -------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#options-for-html-output
@@ -51,6 +52,8 @@ html_sidebars = {
         "relations.html",  # Default: Next/Previous links
         "searchbox.html",  # Default: Search box
         "sidebar_theme_switcher.html",  # CUSTOM: Our new template for the switcher
+        "sidebar_lichess_puzzle.html",
+        "sidebar_we_support.html",
     ]
 }
 
@@ -59,5 +62,6 @@ html_theme_options = {
     "github_repo": "64-shades.github.io",
     "github_button": True,  # This enables the GitHub button feature
     "github_type": "fork",  # Use 'watch' for the Star button
-    # REMOVED: The extra_nav_links are now placed directly via the template file
+    "show_relbar_top": False,
+    "show_relbar_bottom": True,
 }

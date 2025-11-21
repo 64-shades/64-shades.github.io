@@ -18,3 +18,6 @@ a quick walkthrough show and tell.
 
 I lost all 7 games of chess that I played. All games today
 were 5 minute blitz games.
+
+.. note:: "For A Hard Earned Thirst." In 2004, `Victoria Bitter <https://en.wikipedia.org/wiki/Victoria_Bitter>`__
+          commanded more than a 25 per cent market share, meaning that one in four beers sold in Australia was a VB.
