@@ -4,6 +4,9 @@ Third Event
 Breakfast Creek Hotel
 ---------------------
 
+Tuesday 21st October 4:00pm start until 5:30pm
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
 A number of the local hotel regulars joined in for some games and performance enhancing beers.
 
 I ordered a bowl of chips which came both with tomato and white sauce. I washed this down
