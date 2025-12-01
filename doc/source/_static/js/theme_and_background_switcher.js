@@ -7,6 +7,7 @@ const BG_MAP = {
     "harmegedo":            "harmegedo",
     "history-of-64-shades": "history",
     "second-event":         "second-event",
+    "sixth-event":          "sixth-event",
     "quaternity":           "quaternity-wooden-set",
     "the-first-challenger": "first-event-first-game",
     "third-event":          "third-event-beers-in-play"
