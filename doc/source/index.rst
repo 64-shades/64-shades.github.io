@@ -6,6 +6,11 @@
 Welcome to the Official 64 Shades World Chess Team and Games Club 🀄 🃏 ♟️ 🎲 🕹️
 =================================================================================
 
+.. topic:: Next Event at the Breakfast Creek Hotel
+
+   .. important:: Monday 8th of December 5pm until 6:30pm
+
+
 64 Shades is a team of cutting-edge game teachers and players who also love open-source on GitHub.
 We’re here to celebrate global games, with a vibrant, tech-loving community.
 
@@ -19,6 +24,7 @@ We’re here to celebrate global games, with a vibrant, tech-loving community.
    :maxdepth: 2
    :caption: Events
 
+   sixth-event
    fifth-event
    fourth-event
    third-event
