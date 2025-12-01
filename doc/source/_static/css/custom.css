@@ -66,6 +66,10 @@ div.sphinxsidebar .caption {
     color: var(--heading-color);
 }
 
+div.sphinxsidebar .caption {
+    font-size: 16pt;
+}
+
 /* Sidebar Normal Links */
 div.sphinxsidebar a {
     color: var(--link-color);
