@@ -187,3 +187,7 @@ div.body {
     padding-left: 40px;
     padding-right: 40px;
 }
+
+div.body .caption {
+    font-size: 16pt;
+}
