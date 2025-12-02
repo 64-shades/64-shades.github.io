@@ -7,6 +7,7 @@ const BG_MAP = {
     "fourth-event":         "fourth-event",
     "fifth-event":          "fifth-event",
     "sixth-event":          "sixth-event",
+    "catan":                "catan",
     "chess":                "chess",
     "c-o-o-l-chess":        "cool-chess",
     "harmegedo":            "harmegedo",
