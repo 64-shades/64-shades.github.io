@@ -7,11 +7,14 @@ const BG_MAP = {
     "fourth-event":         "fourth-event",
     "fifth-event":          "fifth-event",
     "sixth-event":          "sixth-event",
+    "chess":                "chess",
+    "c-o-o-l-chess":        "cool-chess",
     "harmegedo":            "harmegedo",
     "history-of-64-shades": "history",
     "quaternity":           "quaternity-wooden-set",
     "the-first-challenger": "first-event-first-game",
-    "top-pitfalls":         "top-pitfalls"
+    "top-pitfalls":         "top-pitfalls",
+    "uno-show-em-no-mercy": "uno-show-em-no-mercy"
 };
 
 const THEME_KEY = 'sphinx_theme_preference';

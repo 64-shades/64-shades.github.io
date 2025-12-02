@@ -39,13 +39,23 @@ We’re here to celebrate global games, with a vibrant, tech-loving community.
 
 .. toctree::
    :maxdepth: 2
-   :caption: Game Catalog
+   :caption: Board Game Catalog
 
-   chess.rst
-   4-player-chess
-   quaternity
-   harmegedo
+   catan
+   chess
    chinese-checkers
+   4-player-chess
+   harmegedo
+   mahjong
+   monopoly
+   quaternity
+
+.. toctree::
+   :maxdepth: 2
+   :caption: Card Game Catalog
+
+   trivial-pursuit-1980s
+   uno-no-mercy
 
 .. toctree::
    :maxdepth: 2
@@ -58,3 +68,9 @@ We’re here to celebrate global games, with a vibrant, tech-loving community.
    :caption: Chess Gems
 
    top-novice-pitfalls.rst
+
+.. toctree::
+   :maxdepth: 2
+   :caption: Books
+
+   books-cool-chess
