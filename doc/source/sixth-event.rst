@@ -21,7 +21,7 @@ did have a brief chat about the club and I did give her my
 business card. She seemed to think it was great having chess
 at the creek.
 
-I lost 2 of games blitz with 5 minute time controls to a younger
+I lost 2 games of blitz with 5 minute time controls to a younger
 guy. We did play another game of rapid chess with 15 minutes each
 and I was leading on material a Queen versus a Rook but I lost on time.
 
