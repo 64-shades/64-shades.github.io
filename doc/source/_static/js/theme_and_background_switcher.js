@@ -1,16 +1,17 @@
 // Map page IDs to their corresponding background image URLs
 const BG_MAP = {
     "welcome-to-the-official-64-shades-world-chess-team-and-games-club": "the-big-issue",
-    "fifth-event":          "fifth-event",
     "first-event":          "first-event-second-game",
+    "second-event":         "second-event",
+    "third-event":          "third-event-beers-in-play",
     "fourth-event":         "fourth-event",
+    "fifth-event":          "fifth-event",
+    "sixth-event":          "sixth-event",
     "harmegedo":            "harmegedo",
     "history-of-64-shades": "history",
-    "second-event":         "second-event",
-    "sixth-event":          "sixth-event",
     "quaternity":           "quaternity-wooden-set",
     "the-first-challenger": "first-event-first-game",
-    "third-event":          "third-event-beers-in-play"
+    "top-pitfalls":         "top-pitfalls"
 };
 
 const THEME_KEY = 'sphinx_theme_preference';
