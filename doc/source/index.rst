@@ -16,12 +16,6 @@ We’re here to celebrate global games, with a vibrant, tech-loving community.
 
 .. toctree::
    :maxdepth: 2
-   :caption: Contents
-
-   the-first-challenger
-
-.. toctree::
-   :maxdepth: 2
    :caption: Events
 
    sixth-event
@@ -30,6 +24,7 @@ We’re here to celebrate global games, with a vibrant, tech-loving community.
    third-event
    second-event
    first-event
+   the-first-challenger
 
 .. toctree::
    :maxdepth: 2
