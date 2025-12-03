@@ -19,8 +19,8 @@ def generate_commit_json():
     git_log_command = [
         "git",
         "log",
-        "-n",
-        "100",
+        # "-n",
+        # "100",
         "--no-merges",  # Exclude merge commits for cleaner history
         "--pretty=format:%H|%h|%s|%ci",  # H=full SHA, h=short SHA, s=subject, ci=commit date
     ]
