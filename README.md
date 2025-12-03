@@ -30,6 +30,7 @@ This site is built using ...
 
 ### Framework
 
+- [Alabaster](https://alabaster.readthedocs.io/) is a visually (c)lean, responsive, configurable theme for the Sphinx documentation system. It requires Python 3.10 or newer and Sphinx 6.2 or newer.
 - [CSS](https://en.wikipedia.org/wiki/CSS), or Cascading Style Sheets, is a stylesheet language used to describe the presentation and styling
   of a document written in a markup language, most commonly HTML. It is a fundamental technology of the World Wide Web,
   working alongside HTML and JavaScript to create interactive and visually appealing websites.
