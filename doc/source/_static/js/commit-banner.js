@@ -5,6 +5,9 @@ document.addEventListener('DOMContentLoaded', () => {
     const commitList = document.getElementById('commit-list');
     let allCommits = [];
 
+    // Define the base URL for your GitHub repository
+    const GITHUB_REPO_URL = 'https://github.com/64-shades/64-shades.github.io/commit/';
+
     // Function to render the list of commits
     function renderCommits(commits) {
         commitList.innerHTML = '';
@@ -14,9 +17,18 @@ document.addEventListener('DOMContentLoaded', () => {
         }
         commits.forEach(commit => {
             const li = document.createElement('li');
+
             // Format for display
+            // Use the full 'commit.sha' for the link URL
+            // Use 'commit.short_sha' for the visible text
             li.innerHTML = `
-                <strong style="color: #0077aa;">${commit.short_sha}</strong>
+                <a
+                    href="${GITHUB_REPO_URL}${commit.sha}"
+                    target="_blank"
+                    style="color: #0077aa; font-weight: bold; text-decoration: none;"
+                >
+                    ${commit.short_sha}
+                </a>
                 (${commit.date.substring(0, 10)}):
                 ${commit.message}
             `;
