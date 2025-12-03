@@ -28,6 +28,7 @@ nitpicky = True
 
 html_theme = "alabaster"
 html_static_path = ["_static"]
+html_extra_path = ["_generated_static"]
 
 html_logo = "_static/images/logo.jpeg"
 
