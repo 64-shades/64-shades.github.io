@@ -232,3 +232,14 @@ div.body .caption {
     padding: 5px;
     margin-bottom: 10px;
 }
+
+/* Target the links inside the commit list for consistent styling */
+#commit-list a {
+    text-decoration: none; /* Remove underline */
+    color: #0077aa !important; /* Ensure consistent color */
+    font-weight: bold; /* Make the hash stand out */
+}
+
+#commit-list a:hover {
+    text-decoration: underline; /* Add underline on hover */
+}
