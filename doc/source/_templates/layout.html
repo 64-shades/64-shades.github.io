@@ -1,0 +1,20 @@
+{% extends "!layout.html" %}
+{% block extrahead %}
+  <link rel="stylesheet" href="{{ pathto('_static/css/custom.css', 1) }}" type="text/css" />
+  {{ super() }}
+{% endblock %}
+
+{% block content %}
+<div id="full-width-commit-banner">
+    <button id="commit-dropdown-button">View Commits (Build-Time Data)</button>
+    <div id="commit-dropdown-content" style="display:none;">
+        <input type="text" id="commit-search" placeholder="Filter commit message or SHA...">
+        <ul id="commit-list">
+            <li>Loading client-side data...</li>
+        </ul>
+    </div>
+</div>
+{{ super() }}
+
+<script src="{{ pathto('_static/js/commit-banner.js', 1) }}"></script>
+{% endblock %}

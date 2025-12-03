@@ -191,3 +191,44 @@ div.body {
 div.body .caption {
     font-size: 16pt;
 }
+
+/* _static/custom.css */
+#full-width-commit-banner {
+    width: 100%;
+    background-color: #333; /* Dark background for banner */
+    color: white;
+    padding: 10px 0;
+    text-align: left; /* Aligns the button */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    position: relative; /* Essential for dropdown positioning */
+    z-index: 1000; /* Ensure it stays on top */
+}
+
+#commit-dropdown-button {
+    margin-left: 20px; /* Left align from page edge */
+    padding: 8px 15px;
+    background-color: #555;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+#commit-dropdown-content {
+    position: absolute;
+    left: 20px;
+    top: 100%; /* Position below the button */
+    background-color: white;
+    color: black;
+    border: 1px solid #ccc;
+    max-height: 400px;
+    overflow-y: auto;
+    width: 300px;
+    z-index: 1001;
+    padding: 10px;
+}
+
+#commit-search {
+    width: 95%;
+    padding: 5px;
+    margin-bottom: 10px;
+}
