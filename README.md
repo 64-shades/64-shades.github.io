@@ -34,7 +34,7 @@ This site is built using ...
 - [CSS](https://en.wikipedia.org/wiki/CSS), or Cascading Style Sheets, is a stylesheet language used to describe the presentation and styling
   of a document written in a markup language, most commonly HTML. It is a fundamental technology of the World Wide Web,
   working alongside HTML and JavaScript to create interactive and visually appealing websites.
-- [HTML](https://en.wikipedia.org/wiki/HTML), or Hypertext Markup Language, is the standard language for creating web pages and structuring their content. It uses tags to define elements like headings, paragraphs, and images, telling a web browser how    to display them. HTML is the foundational building block of the internet, providing the structure that is then styled with languages like CSS and made interactive with JavaScript.  
+- [HTML](https://en.wikipedia.org/wiki/HTML), or Hypertext Markup Language, is the standard language for creating web pages and structuring their content. It uses tags to define elements like headings, paragraphs, and images, telling a web browser how to display them. HTML is the foundational building block of the internet, providing the structure that is then styled with languages like CSS and made interactive with JavaScript.
 - [JavaScript](https://en.wikipedia.org/wiki/JavaScript) is a programming language and core technology of the web platform, alongside HTML and CSS.
   Ninety-nine percent of websites on the World Wide Web use JavaScript on the client side for webpage behavior.
   Web browsers have a dedicated JavaScript engine that executes the client code.
