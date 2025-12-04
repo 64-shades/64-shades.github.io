@@ -39,7 +39,7 @@ This site is built using ...
   Ninety-nine percent of websites on the World Wide Web use JavaScript on the client side for webpage behavior.
   Web browsers have a dedicated JavaScript engine that executes the client code.
 - [JSON](https://www.json.org), or JavaScript Object Notation, is a lightweight data-interchange format that is easy for humans to read and easy for machines to parse. It's widely used to transmit data between a server and a web application and is a common format for APIs and configuration files. While its roots are in JavaScript, JSON is language-independent and supported by most modern programming languages.
-- [Makefiles](https://en.wikipedia.org/wiki/Make_(software)) are text files that contain instructions for the make utility, a build automation tool commonly used in Unix-like operating systems. They define how to build or update target files (like executables or libraries) from source files,
+- [Makefiles](<https://en.wikipedia.org/wiki/Make_(software)>) are text files that contain instructions for the make utility, a build automation tool commonly used in Unix-like operating systems. They define how to build or update target files (like executables or libraries) from source files,
   managing dependencies and executing commands.
 - [Python](https://www.python.org/) is a programming language that lets you work quickly and integrate systems more effectively.
 - [reStructuredText (RST)](https://www.sphinx-doc.org/en/master/usage/restructuredtext/basics.html) is a lightweight markup language designed for creating easy-to-read and easy-to-write

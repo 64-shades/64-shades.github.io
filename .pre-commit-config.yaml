@@ -18,9 +18,9 @@ repos:
       - id: prettier
         name: run prettier
         description: format files with prettier
-        entry: prettier --write '**/*.yaml' '**/*.yml'
+        entry: prettier --write '**/*.md' '**/*.yaml' '**/*.yml'
         args: [--config=.github/linters/.prettierrc]
-        files: \.ya?ml$
+        files: \.(md|ya?ml)$
         language: node
         additional_dependencies: ['prettier@3.7.4']
       - id: check-zip-file-is-not-committed
