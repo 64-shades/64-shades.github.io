@@ -22,7 +22,8 @@ def generate_commit_json():
         # "-n",
         # "100",
         "--no-merges",  # Exclude merge commits for cleaner history
-        "--pretty=format:%H|%h|%s|%ci",  # H=full SHA, h=short SHA, s=subject, ci=commit date
+        "--pretty=format:%H|%h|%s|%cd",
+        "--date=format:%Y-%m-%d %H:%M:%S",
     ]
 
     # Define the output directory relative to the script
