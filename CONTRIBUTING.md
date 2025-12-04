@@ -15,26 +15,31 @@ Thank you for your interest in contributing to En Passant documentation! We welc
 1. **Fork the repository** - Click the "Fork" button at the top right of the repository page
 
 2. **Clone your fork**
-```bash
-   git clone https://github.com/YOUR_USERNAME/64-shades.github.io.git
-   cd 64-shades.github.io
-```
+
+    ```bash
+       git clone https://github.com/YOUR_USERNAME/64-shades.github.io.git
+       cd 64-shades.github.io
+    ```
 
 3. **Install dependencies**
-```bash
-   cd doc
-   pip install -r requirements-docs.txt
-```
+
+    ```bash
+       cd doc
+       pip install -r requirements-docs.txt
+    ```
 
 4. **Create a branch for your changes**
-```bash
-   git checkout -b fix/your-fix-name
-```
-   Use prefixes like `fix/`, `feature/`, `docs/`, or `update/` for your branch names.
+
+    ```bash
+       git checkout -b fix/your-fix-name
+    ```
+
+Use prefixes like `fix/`, `feature/`, `docs/`, or `update/` for your branch names.
 
 ## Building the Documentation Locally
 
 To preview your changes before submitting:
+
 ```bash
 cd doc
 make html
@@ -57,6 +62,7 @@ The generated HTML site will be in the `doc/build/html` folder. Open `index.html
 ### Common RST Syntax
 
 Here are some helpful RST patterns used in the project:
+
 ```rst
 Headers
 =======
@@ -88,18 +94,21 @@ For more RST syntax, check the [reStructuredText documentation](https://www.sphi
 ## Submitting Your Contribution
 
 ### Commit Your Changes
+
 ```bash
 git add .
 git commit -m "Docs: brief description of your changes"
 ```
 
 **Commit message prefixes:**
+
 - `Docs:` - Documentation changes
 - `Fix:` - Bug fixes or corrections
 - `Add:` - New content or features
 - `Update:` - Updates to existing content
 
 ### Push to Your Fork
+
 ```bash
 git push origin fix/your-fix-name
 ```
@@ -114,6 +123,7 @@ git push origin fix/your-fix-name
 6. Submit your PR
 
 **In your PR description, include:**
+
 - What changes you made
 - Why you made them
 - Any issues this fixes or addresses
@@ -122,6 +132,7 @@ git push origin fix/your-fix-name
 ## Types of Contributions We Welcome
 
 ### Documentation Improvements
+
 - Fixing typos, grammar, or formatting
 - Clarifying confusing sections
 - Adding examples or tutorials
@@ -129,12 +140,14 @@ git push origin fix/your-fix-name
 - Updating outdated information
 
 ### New Content
+
 - Adding new documentation pages
 - Creating guides or tutorials
 - Documenting new features
 - Adding diagrams or illustrations
 
 ### Technical Improvements
+
 - Fixing broken links
 - Improving Sphinx configuration
 - Enhancing CSS styling
