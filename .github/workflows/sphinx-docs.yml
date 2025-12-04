@@ -1,4 +1,4 @@
-name: Sphinx Docs Build
+name: ⚒️ Sphinx Docs Build
 
 on:
   push:
@@ -11,6 +11,7 @@ permissions:
 
 jobs:
   build-docs:
+    name: 👷‍♂️ Build Documentation
     runs-on: ubuntu-latest
     steps:
       - name: Checkout code
