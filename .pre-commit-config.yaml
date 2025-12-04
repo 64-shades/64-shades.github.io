@@ -56,6 +56,21 @@ repos:
         args: ['644']
         files: \.md$
         stages: [manual]
+  - repo: https://github.com/pre-commit/pygrep-hooks
+    rev: v1.10.0
+    hooks:
+      - id: rst-backticks
+        name: run rst-backticks
+        description: detect common mistake of using single backticks when writing rst
+      - id: rst-directive-colons
+        name: run rst-directive-colons
+        description: detect mistake of rst directive not ending with double colon or space before the double colon
+      - id: rst-inline-touching-normal
+        name: run rst-inline-touching-normal
+        description: detect mistake of inline code touching normal text in rst
+      - id: text-unicode-replacement-char
+        name: run check for no unicode replacement char
+        description: Forbid files which have a UTF-8 Unicode replacement character
   - repo: https://github.com/igorshubovych/markdownlint-cli
     rev: v0.45.0
     hooks:
