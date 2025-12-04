@@ -1,6 +1,6 @@
 // Map page IDs to their corresponding background image URLs
 const BG_MAP = {
-    "welcome-to-the-official-64-shades-world-chess-team-and-games-club": "the-big-issue",
+    "shades-games-club":    "the-big-issue",
     "first-event":          "first-event-second-game",
     "second-event":         "second-event",
     "third-event":          "third-event-beers-in-play",
