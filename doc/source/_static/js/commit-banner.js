@@ -29,7 +29,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 >
                     ${commit.short_sha}
                 </a>
-                (${commit.date.substring(0, 10)}):
+                (${commit.date}):
                 ${commit.message}
             `;
             commitList.appendChild(li);
