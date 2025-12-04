@@ -47,6 +47,7 @@ This site is built using ...
   technical documentation, including Python's official documentation and documentation for many Python libraries.
 - [Sphinx](https://www.sphinx-doc.org/en/master/) is a powerful and widely-used documentation generator written in Python. It is particularly popular
   within the Python community and is considered the de facto standard for documenting Python projects.
+- [YAML](https://yaml.org) is a human-readable data serialization language commonly used for configuration files and data exchange between programming languages. It uses Python-style indentation and key-value pairs to represent data structures, making it easy to read and write.
 
 ---
 
