@@ -12,25 +12,20 @@ permissions:
 
 jobs:
   codeql:
-    name: CodeQL
+    name: 🖥️ CodeQL
     runs-on: ubuntu-latest
-
     strategy:
       matrix:
         language: ['actions', 'javascript', 'python']
-
     steps:
       - name: Checkout repository
         uses: actions/checkout@v6
-
       - name: Initialize CodeQL
         uses: github/codeql-action/init@v4
         with:
           languages: ${{ matrix.language }}
-
       - name: Autobuild
         uses: github/codeql-action/autobuild@v4
-
       - name: Perform CodeQL Analysis
         uses: github/codeql-action/analyze@v4
         with:
