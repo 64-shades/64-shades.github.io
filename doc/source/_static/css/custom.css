@@ -15,6 +15,10 @@ body.light-theme {
     --search-bg-color: #fff;        /* Search Box White */
     --footer-bg-color: #000;        /* Footer Black */
     --footer-text-color: #fff;      /* Footer White */
+
+    /* Commit Specific Colors (Light) */
+    --commit-link-color: #0077aa;
+    --commit-date-color: red;
 }
 
 /* Dark Theme Variables */
@@ -31,6 +35,10 @@ body.dark-theme {
     --search-bg-color: #3e4451;     /* Search Box Dark Gray */
     --footer-bg-color: #1a1a1a;     /* Footer Dark Gray */
     --footer-text-color: #c9c9c9;   /* Footer Light Gray */
+
+    /* Commit Specific Colors (Dark) */
+    --commit-link-color: var(--link-color); /* Use standard link color for visibility */
+    --commit-date-color: orange; /* Better visibility than red on dark background */
 }
 
 /* --- 2. Apply Variables to Global Elements --- */
@@ -117,8 +125,6 @@ div.sphinxsidebar ul li a, div.sphinxsidebar p {
 }
 
 /* --- 6. Content Wrapper for Background Image Setting --- */
-/* When background is ON, bodywrapper background is set to transparent by JS. */
-/* When background is OFF, bodywrapper uses the main-bg-color (light/dark). */
 
 .bodywrapper {
     background-color: var(--main-bg-color);
@@ -134,7 +140,7 @@ body.dark-theme .bodywrapper .body {
     background-color: orange;
 }
 
-/* --- New 7. Random Theme Overrides --- */
+/* --- 7. Random Theme Overrides --- */
 
 /* Define the new CSS variables for random colors (they will be set via JS) */
 :root {
@@ -162,13 +168,18 @@ body.custom-random-theme {
     --search-bg-color: var(--random-border-color); /* Use a darker color */
     --footer-bg-color: var(--random-footer-bg-color);
     --footer-text-color: var(--random-text-color);
+
+    /* Commit Specific Colors (Random Theme) */
+    --commit-link-color: var(--random-link-color);
+    --commit-date-color: #ffcc00; /* Yellow */
 }
+
 /* Ensure the bodywrapper also uses the random background color if background image is off */
 body.custom-random-theme .bodywrapper {
     background-color: var(--random-main-bg-color);
 }
 
-/* --- New 8. Custom Vertical Orange Gradient for bodywrapper --- */
+/* --- 8. Custom Vertical Orange Gradient for bodywrapper --- */
 
 /* Target the bodywrapper element for the gradient background */
 .bodywrapper .body {
@@ -192,7 +203,8 @@ div.body .caption {
     font-size: 16pt;
 }
 
-/* _static/custom.css */
+/* --- 9. Custom Commit Banner and Dropdown Styles --- */
+
 #full-width-commit-banner {
     width: 100%;
     background-color: #333; /* Dark background for banner */
@@ -227,19 +239,49 @@ div.body .caption {
     padding: 10px;
 }
 
+/* Class to control the initial visibility */
+#commit-dropdown-content.commit-dropdown-hidden {
+    display: none;
+}
+
 #commit-search {
     width: 95%;
     padding: 5px;
     margin-bottom: 10px;
+    /* Ensure the search bar respects theme colors */
+    background-color: var(--search-bg-color);
+    color: var(--text-color);
+    border-color: var(--border-color);
 }
 
-/* Target the links inside the commit list for consistent styling */
-#commit-list a {
-    text-decoration: none; /* Remove underline */
-    color: #0077aa !important; /* Ensure consistent color */
-    font-weight: bold; /* Make the hash stand out */
+/* --- 10. CSS Class Styles for Dynamic Content (Commits) --- */
+
+/* Style for the short SHA link (used in renderCommits) */
+.commit-sha-link {
+    color: var(--commit-link-color) !important;
+    font-weight: bold;
+    text-decoration: none;
 }
 
-#commit-list a:hover {
-    text-decoration: underline; /* Add underline on hover */
+.commit-sha-link:hover {
+    text-decoration: underline;
+}
+
+/* Style for the date span (used in renderCommits) */
+.commit-date-span {
+    color: var(--commit-date-color);
+}
+
+/* Style for the Pull Request link (used in formatCommitMessage) */
+.commit-pr-link {
+    color: var(--commit-link-color) !important;
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+/* Ensure the dropdown content itself uses the theme colors correctly */
+body #commit-dropdown-content {
+    background-color: var(--main-bg-color);
+    color: var(--text-color);
+    border-color: var(--border-color);
 }
