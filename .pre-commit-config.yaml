@@ -30,6 +30,12 @@ repos:
           Zip files are not allowed in the repository as they are hard to
           track and have security implications. Please remove the zip file from the repository.
         files: \.zip$
+  - repo: https://github.com/pycqa/isort
+    rev: 7.0.0
+    hooks:
+      - id: isort
+        name: run isort
+        description: A Python utility / library to sort imports.
   - repo: https://github.com/psf/black
     rev: 25.1.0
     hooks:
@@ -48,6 +54,8 @@ repos:
         description: Attempts to load all json files to verify syntax.
       - id: check-merge-conflict
         description: Check for files that contain merge conflict strings.
+      - id: check-toml
+        description: Attempts to load all TOML files to verify syntax.
       - id: check-vcs-permalinks
         description: Ensures that links to vcs websites are permalinks.
       - id: check-yaml
