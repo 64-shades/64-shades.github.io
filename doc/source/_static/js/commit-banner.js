@@ -179,7 +179,11 @@ function loadThemePreference() {
  * @returns {string} The formatted message with a linked PR anchor, or the original message.
  */
 function formatCommitMessage(message) {
-  let formattedMessage = message;
+  // To prevent XSS, we must escape the user-provided message first.
+  const tempDiv = document.createElement('div');
+  tempDiv.textContent = message;
+  let formattedMessage = tempDiv.innerHTML;
+
   const match = formattedMessage.match(prRegex);
 
   if (match) {
@@ -187,8 +191,8 @@ function formatCommitMessage(message) {
     const prNumber = prTag.substring(1);
     const prUrl = `${GITHUB_REPO_URL}/pull/${prNumber}`;
 
-    // Replace the matched text with the HTML anchor tag, using the CSS class
-    // NOTE: This inserts a controlled <a> tag. We trust this structure.
+    // Replace the matched text with the HTML anchor tag.
+    // The message is already escaped, so this is safe.
     formattedMessage = formattedMessage.replace(
       prRegex,
       ` (<a
