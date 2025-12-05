@@ -68,7 +68,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 >
                     ${commit.short_sha}
                 </a>
-                (${commit.date}):
+                (<span style="color: red;">${commit.date}</span>):
                 ${formattedMessage}
             `;
       commitList.appendChild(li);
