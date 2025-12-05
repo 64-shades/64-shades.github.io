@@ -29,7 +29,7 @@ document.addEventListener('DOMContentLoaded', () => {
       const prNumber = prTag.substring(1); // e.g., "241"
       const prUrl = `${GITHUB_REPO_URL}/pull/${prNumber}`;
 
-      // Replace the matched text with the HTML anchor tag
+      // Replace the matched text with the HTML anchor tag, using the CSS class
       formattedMessage = formattedMessage.replace(
         prRegex,
         // Insert a space before the link for better readability
@@ -37,7 +37,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     href="${prUrl}"
                     target="_blank"
                     rel="noopener noreferrer"
-                    style="color: #0077aa; font-weight: bold; text-decoration: underline;"
+                    class="commit-pr-link"
                 >${prTag}</a>)`,
       );
     }
@@ -57,18 +57,16 @@ document.addEventListener('DOMContentLoaded', () => {
       // Apply the new formatting function to the commit message
       const formattedMessage = formatCommitMessage(commit.message);
 
-      // Format for display
-      // Use the full 'commit.sha' for the link URL
-      // Use 'commit.short_sha' for the visible text
+      // Format for display - Use CSS classes for styling
       li.innerHTML = `
                 <a
                     href="${GITHUB_COMMIT_URL}${commit.sha}"
                     target="_blank"
-                    style="color: #0077aa; font-weight: bold; text-decoration: none;"
+                    class="commit-sha-link"
                 >
                     ${commit.short_sha}
                 </a>
-                (<span style="color: red;">${commit.date}</span>):
+                (<span class="commit-date-span">${commit.date}</span>):
                 ${formattedMessage}
             `;
       commitList.appendChild(li);
@@ -100,11 +98,12 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // 1. Toggle Dropdown and Load Data
   button.addEventListener('click', () => {
-    const isVisible = content.style.display === 'block';
-    content.style.display = isVisible ? 'none' : 'block';
+    // Toggle the 'commit-dropdown-hidden' class.
+    // The toggle() method returns true if the class is added (now hidden), and false if the class is removed (now visible).
+    const wasHidden = content.classList.toggle('commit-dropdown-hidden');
 
-    // Load data only on the first click
-    if (!isVisible && allCommits.length === 0) {
+    // Load data only when it is being shown (i.e., when it was hidden before the toggle)
+    if (!wasHidden && allCommits.length === 0) {
       loadCommitData();
     }
   });
