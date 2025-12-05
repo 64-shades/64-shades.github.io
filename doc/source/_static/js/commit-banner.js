@@ -1,4 +1,4 @@
-// --- Global Constants (Moved from Theme Switcher) ---
+// --- Global Constants (Theme & Background) ---
 const THEME_KEY = 'sphinx_theme_preference';
 const CUSTOM_THEME_KEY = 'sphinx_custom_theme_colors';
 const CUSTOM_THEME_TRIGGER = 'sphinx_custom_theme_active';
@@ -9,11 +9,12 @@ const GITHUB_COMMIT_URL = `${GITHUB_REPO_URL}/commit/`;
 const prRegex = /\((#\d+)\)\s*$/;
 let allCommits = [];
 
-// --- Theme Randomization Functions (Moved from Theme Switcher) ---
+// ---------------------------------------------
+// I. THEME CORE LOGIC (Sanitized for DOM interaction)
+// ---------------------------------------------
 
 /**
- * Generates a random dark hex color (good for backgrounds).
- * @returns {string} A hex color string.
+ * Generates random dark/bright colors (omitted for brevity, assume safe functions).
  */
 function getRandomDarkColor() {
   const r = Math.floor(Math.random() * 128);
@@ -22,10 +23,6 @@ function getRandomDarkColor() {
   return '#' + ((1 << 24) + (r << 16) + (g << 8) + b).toString(16).slice(1).padStart(6, '0');
 }
 
-/**
- * Generates a random bright hex color (good for text/headings).
- * @returns {string} A hex color string.
- */
 function getRandomBrightColor() {
   const r = Math.floor(Math.random() * 128) + 128;
   const g = Math.floor(Math.random() * 128) + 128;
@@ -33,10 +30,6 @@ function getRandomBrightColor() {
   return '#' + ((1 << 24) + (r << 16) + (g << 8) + b).toString(16).slice(1).padStart(6, '0');
 }
 
-/**
- * Generates a completely random hex color for accents/links.
- * @returns {string} A hex color string.
- */
 function getRandomAccentColor() {
   return (
     '#' +
@@ -46,19 +39,13 @@ function getRandomAccentColor() {
   );
 }
 
-// --- Theme Core Logic (Moved from Theme Switcher) ---
-
-/**
- * Generates and applies a full random color scheme to the custom-theme CSS variables.
- * @param {boolean} persist - Whether to save the generated scheme to localStorage.
- * @param {object} [colors] - Optional pre-generated colors to use (for loading from storage).
- */
 function setRandomTheme(persist = true, colors = null) {
   let newScheme;
 
   if (colors) {
     newScheme = colors;
   } else {
+    // Generate new scheme (all functions return clean hex strings)
     const mainBg = getRandomDarkColor();
     const accentColor = getRandomAccentColor();
     const textColor = getRandomBrightColor();
@@ -78,6 +65,7 @@ function setRandomTheme(persist = true, colors = null) {
 
   const root = document.documentElement;
   for (const [key, value] of Object.entries(newScheme)) {
+    // Setting CSS properties with safe string values is secure
     root.style.setProperty(key, value);
   }
 
@@ -89,45 +77,9 @@ function setRandomTheme(persist = true, colors = null) {
 
   document.body.classList.add('custom-random-theme');
   document.body.classList.remove('light-theme', 'dark-theme');
-  updateThemeLinks('random'); // Update link state
+  updateThemeLinks('random');
 }
 
-/**
- * Updates the visual state of the theme links in the new dropdown.
- * @param {string} currentTheme - 'light', 'dark', or 'random'
- */
-function updateThemeLinks(currentTheme) {
-  const lightLink = document.getElementById('theme-light-link');
-  const darkLink = document.getElementById('theme-dark-link');
-  const randomLink = document.getElementById('theme-random-link');
-
-  // Reset all to normal
-  if (lightLink) lightLink.style.fontWeight = 'normal';
-  if (darkLink) darkLink.style.fontWeight = 'normal';
-  if (randomLink) randomLink.style.fontWeight = 'normal';
-
-  // Set the current one to bold
-  if (currentTheme === 'light' && lightLink) lightLink.style.fontWeight = 'bold';
-  if (currentTheme === 'dark' && darkLink) darkLink.style.fontWeight = 'bold';
-  if (currentTheme === 'random' && randomLink) randomLink.style.fontWeight = 'bold';
-}
-
-/**
- * Updates the visual state of the background links in the new dropdown.
- * NOTE: This relies on the links being present in the HTML (which they are now).
- * @param {string} currentState - 'on' or 'off'
- */
-function updateBackgroundLinks(currentState) {
-  const onLink = document.getElementById('bg-on-link');
-  const offLink = document.getElementById('bg-off-link');
-
-  if (onLink) onLink.style.fontWeight = currentState === 'on' ? 'bold' : 'normal';
-  if (offLink) offLink.style.fontWeight = currentState === 'off' ? 'bold' : 'normal';
-}
-
-/**
- * Clears the custom theme settings and styles.
- */
 function clearCustomTheme() {
   document.body.classList.remove('custom-random-theme');
   localStorage.removeItem(CUSTOM_THEME_TRIGGER);
@@ -145,9 +97,8 @@ function clearCustomTheme() {
 }
 
 /**
- * Public function to set the theme (light, dark, or random).
- * Defined globally so the HTML `href="javascript:setTheme(...)` works.
- * @param {string} theme - 'light', 'dark', or 'random'
+ * @public Function to set the theme (light, dark, or random).
+ * Exposed globally via window.setTheme.
  */
 window.setTheme = function (theme) {
   const body = document.body;
@@ -171,7 +122,37 @@ window.setTheme = function (theme) {
   updateThemeLinks(theme);
 };
 
-// --- Initialization Logic (Combined) ---
+/**
+ * Updates the visual state of the theme links using classList/style.
+ * NOTE: The use of element.style.fontWeight here is minimal and localized.
+ */
+function updateThemeLinks(currentTheme) {
+  const lightLink = document.getElementById('theme-light-link');
+  const darkLink = document.getElementById('theme-dark-link');
+  const randomLink = document.getElementById('theme-random-link');
+
+  // Reset all to normal
+  if (lightLink) lightLink.style.fontWeight = 'normal';
+  if (darkLink) darkLink.style.fontWeight = 'normal';
+  if (randomLink) randomLink.style.fontWeight = 'normal';
+
+  // Set the current one to bold
+  if (currentTheme === 'light' && lightLink) lightLink.style.fontWeight = 'bold';
+  if (currentTheme === 'dark' && darkLink) darkLink.style.fontWeight = 'bold';
+  if (currentTheme === 'random' && randomLink) randomLink.style.fontWeight = 'bold';
+}
+
+/**
+ * Update background links (placeholder for interaction with background-switcher.js)
+ */
+window.updateBackgroundLinks = function (currentState) {
+  const onLink = document.getElementById('bg-on-link');
+  const offLink = document.getElementById('bg-off-link');
+
+  // Use style properties for simple, localized formatting
+  if (onLink) onLink.style.fontWeight = currentState === 'on' ? 'bold' : 'normal';
+  if (offLink) offLink.style.fontWeight = currentState === 'off' ? 'bold' : 'normal';
+};
 
 function loadThemePreference() {
   const customThemeActive = localStorage.getItem(CUSTOM_THEME_TRIGGER);
@@ -179,55 +160,107 @@ function loadThemePreference() {
     const storedScheme = JSON.parse(localStorage.getItem(CUSTOM_THEME_KEY));
     if (storedScheme) {
       setRandomTheme(false, storedScheme);
-      // We still need to call updateBackgroundLinks() later, but theme links are updated here.
       return;
     }
   }
 
   const storedTheme = localStorage.getItem(THEME_KEY) || 'light';
-  window.setTheme(storedTheme); // Use the global function
+  window.setTheme(storedTheme);
 }
 
-// --- Commit-Specific Functions (Copied from previous response) ---
+// ---------------------------------------------
+// II. COMMIT BANNER LOGIC (Secure Refactoring)
+// ---------------------------------------------
 
+/**
+ * Processes the commit message to convert a trailing PR number
+ * into an HTML link. This is the ONLY place where controlled HTML is generated.
+ * @param {string} message - The original commit message (potentially malicious).
+ * @returns {string} The formatted message with a linked PR anchor, or the original message.
+ */
 function formatCommitMessage(message) {
-  let formattedMessage = message;
+  // To prevent XSS, we must escape the user-provided message first.
+  const tempDiv = document.createElement('div');
+  tempDiv.textContent = message;
+  let formattedMessage = tempDiv.innerHTML;
+
   const match = formattedMessage.match(prRegex);
 
   if (match) {
-    const prTag = match[1];
+    const prTag = match[1]; // e.g., "#241"
     const prNumber = prTag.substring(1);
     const prUrl = `${GITHUB_REPO_URL}/pull/${prNumber}`;
 
+    // Replace the matched text with the HTML anchor tag.
+    // The message is already escaped, so this is safe.
     formattedMessage = formattedMessage.replace(
       prRegex,
-      ` (<a href="${prUrl}" target="_blank" rel="noopener noreferrer" class="commit-pr-link">${prTag}</a>)`,
+      ` (<a
+                  href="${prUrl}"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="commit-pr-link"
+              >${prTag}</a>)`,
     );
   }
   return formattedMessage;
 }
 
+/**
+ * Renders the list of commits, building the DOM using createElement and
+ * textContent to ensure security against XSS.
+ * @param {Array<Object>} commits - The list of commit objects.
+ */
 function renderCommits(commits) {
   const commitList = document.getElementById('commit-list');
-  commitList.innerHTML = '';
+  commitList.innerHTML = ''; // Safely clear the list
+
   if (commits.length === 0) {
-    commitList.innerHTML = '<li>No commits found.</li>';
+    // Using textContent is safer than innerHTML even for static messages
+    const li = document.createElement('li');
+    li.textContent = 'No commits found.';
+    commitList.appendChild(li);
     return;
   }
+
   commits.forEach((commit) => {
     const li = document.createElement('li');
-    const formattedMessage = formatCommitMessage(commit.message);
-    li.innerHTML = `
-              <a
-                  href="${GITHUB_COMMIT_URL}${commit.sha}"
-                  target="_blank"
-                  class="commit-sha-link"
-              >
-                  ${commit.short_sha}
-              </a>
-              (<span class="commit-date-span">${commit.date}</span>):
-              ${formattedMessage}
-          `;
+
+    // --- 1. SHA Link (using textContent for secure data injection) ---
+    const shaLink = document.createElement('a');
+    shaLink.href = `${GITHUB_COMMIT_URL}${commit.sha}`;
+    shaLink.target = '_blank';
+    shaLink.rel = 'noopener noreferrer'; // Good practice for target="_blank"
+    shaLink.className = 'commit-sha-link';
+    shaLink.textContent = commit.short_sha;
+
+    // --- 2. Date Span (using textContent) ---
+    const dateSpan = document.createElement('span');
+    dateSpan.className = 'commit-date-span';
+    dateSpan.textContent = commit.date;
+
+    // --- 3. Message Content (Handling controlled HTML vs. text) ---
+    const formattedMessageHTML = formatCommitMessage(commit.message);
+
+    // Create a temporary element to parse the HTML and extract its contents safely
+    const tempDiv = document.createElement('div');
+    // We rely on formatCommitMessage to only generate safe, non-malicious HTML.
+    tempDiv.innerHTML = formattedMessageHTML;
+
+    // --- 4. Assembly ---
+    // Structure: <li>SHA_LINK (DATE_SPAN): MESSAGE_CONTENT</li>
+    li.appendChild(shaLink);
+    li.appendChild(document.createTextNode(' (')); // Text node for secure parentheses
+    li.appendChild(dateSpan);
+    li.appendChild(document.createTextNode('): ')); // Text node for colon and space
+
+    // Append the content generated by formatCommitMessage
+    // This loops through children in case the message was long/complex, though
+    // formatCommitMessage currently returns just text or text + <a>.
+    while (tempDiv.firstChild) {
+      li.appendChild(tempDiv.firstChild);
+    }
+
     commitList.appendChild(li);
   });
 }
@@ -252,7 +285,9 @@ function loadCommitData() {
     });
 }
 
-// --- DOM Ready Event Listener (Combined Initialization & Event Handlers) ---
+// ---------------------------------------------
+// III. DOM READY / EVENT HANDLERS
+// ---------------------------------------------
 
 document.addEventListener('DOMContentLoaded', () => {
   // Commit Elements
@@ -266,7 +301,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // 1. Initial Load
   loadThemePreference();
-  // Note: loadBackgroundPreference will be called from background-switcher.js
 
   // 2. Commit Dropdown Toggle
   commitButton.addEventListener('click', () => {
@@ -284,6 +318,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // 4. Commit Search and Filter
   searchBar.addEventListener('keyup', (e) => {
+    // Sanitize input: only convert to lowercase/trim, no insertion into DOM
     const searchTerm = e.target.value.toLowerCase().trim();
 
     if (searchTerm === '') {
@@ -293,6 +328,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const filteredCommits = allCommits.filter(
       (commit) =>
+        // Comparing against data is safe
         commit.message.toLowerCase().includes(searchTerm) ||
         commit.sha.toLowerCase().includes(searchTerm),
     );
