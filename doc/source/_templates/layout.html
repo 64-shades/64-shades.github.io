@@ -6,15 +6,31 @@
 
 {% block content %}
 <div id="full-width-commit-banner">
-    <button id="commit-dropdown-button">View Commits (Build-Time Data)</button>
-    <div id="commit-dropdown-content" class="commit-dropdown-hidden">
+    <button id="commit-dropdown-button" class="banner-button">View Commits</button>
+    <div id="commit-dropdown-content" class="commit-dropdown-hidden dropdown-content">
         <input type="text" id="commit-search" placeholder="Filter commit message or SHA...">
         <ul id="commit-list">
             <li>Loading client-side data...</li>
         </ul>
     </div>
+
+    <button id="theme-toggle-button" class="banner-button">🎨 Theme Options</button>
+    <div id="theme-options-content" class="commit-dropdown-hidden dropdown-content">
+        <h3>Theme Options</h3>
+        <div class="theme-option-group">
+            <p><a href="javascript:setTheme('light')" class="theme-switch-link" id="theme-light-link">☀️ Light Theme</a></p>
+            <p><a href="javascript:setTheme('dark')" class="theme-switch-link" id="theme-dark-link">🌙 Dark Theme</a></p>
+            <p><a href="javascript:setTheme('random')" class="theme-switch-link" id="theme-random-link">🌈 Random Theme</a></p>
+        </div>
+        <h3>Background Image</h3>
+        <div class="theme-option-group">
+            <p><a href="javascript:setBackground('on')" class="theme-switch-link" id="bg-on-link">🖼️ Background On</a></p>
+            <p><a href="javascript:setBackground('off')" class="theme-switch-link" id="bg-off-link">⬜ Background Off</a></p>
+        </div>
+    </div>
 </div>
 {{ super() }}
 
 <script src="{{ pathto('_static/js/commit-banner.js', 1) }}"></script>
+<script src="{{ pathto('_static/js/background-switcher.js', 1) }}"></script>
 {% endblock %}
