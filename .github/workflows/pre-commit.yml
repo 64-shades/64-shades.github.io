@@ -20,12 +20,6 @@ jobs:
         python-version: ['3.13']
 
     steps:
-      - name: 🍎 Fix macOS gettext issue
-        if: runner.os == 'macOS'
-        run: |
-          brew install gettext
-          brew link --force gettext
-
       - name: ↩️ Checkout code
         uses: actions/checkout@v6
 
