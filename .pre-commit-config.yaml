@@ -18,7 +18,7 @@ repos:
       - id: prettier
         name: run prettier
         description: format files with prettier
-        entry: prettier --write '**/*.html' '**/*.json' '**/*.md' '**/*.yaml' '**/*.yml'
+        entry: prettier --write '**/*.html' '**/*.js' '**/*.json' '**/*.md' '**/*.yaml' '**/*.yml'
         args: [--config=.github/linters/.prettierrc]
         files: \.(html|json|md|ya?ml)$
         language: node
