@@ -46,7 +46,7 @@ window.setBackground = function (state) {
 
   // The updateBackgroundLinks function is now in commit-banner.js,
   // but since that file is loaded first, we can rely on it being available.
-  const updateBackgroundLinks = window.updateBackgroundLinks || function () { }; // Fallback
+  const updateBackgroundLinks = window.updateBackgroundLinks || function () {}; // Fallback
 
   if (state === 'on' && bgUrl) {
     body.style.backgroundImage = `url('_static/images/backgrounds/${bgUrl}.jpg')`;
@@ -71,7 +71,6 @@ window.setBackground = function (state) {
   localStorage.setItem(BACKGROUND_KEY, state);
   updateBackgroundLinks(state);
 };
-
 
 // Wait for the document to fully load, load the map, then apply preference.
 
