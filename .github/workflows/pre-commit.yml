@@ -52,5 +52,3 @@ jobs:
 
       - name: 🏃🏻‍♂️‍➡️ Run pre-commit
         run: pre-commit run --color=always --all-files
-      - name: 🏃🏻‍♂️‍➡️ Run pre-commit
-        run: pre-commit run --color=always --all-files --hook-stage manual
