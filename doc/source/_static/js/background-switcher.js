@@ -44,7 +44,7 @@ window.setBackground = function (state) {
 
   // The updateBackgroundLinks function is now in commit-banner.js,
   // but since that file is loaded first, we can rely on it being available.
-  const updateBackgroundLinks = window.updateBackgroundLinks || function () { }; // Fallback
+  const updateBackgroundLinks = window.updateBackgroundLinks || function () {}; // Fallback
 
   if (state === 'on' && bgUrl) {
     body.style.backgroundImage = `url('_static/images/backgrounds/${bgUrl}.jpg')`;
@@ -74,10 +74,12 @@ window.setBackground = function (state) {
 
 document.addEventListener('DOMContentLoaded', async function () {
   const data = await loadBackgroundMap();
-  if (data && typeof data === 'object' && !Array.isArray(data)) {
+  if (Object.prototype.toString.call(data) === '[object Object]') {
     Object.assign(BG_MAP, data);
   } else if (data) {
-    console.warn('Loaded background map from JSON is not a valid object; background images will be disabled.');
+    console.warn(
+      'Loaded background map from JSON is not a valid object; background images will be disabled.',
+    );
   }
   loadBackgroundPreference();
 });
