@@ -11,14 +11,12 @@ async function loadBackgroundMap() {
     const response = await fetch(jsonUrl);
     if (!response.ok) {
       console.warn('Failed to load background map JSON; background images will be disabled.');
-      return;
+      return null;
     }
-    const data = await response.json();
-    if (data) {
-      Object.assign(BG_MAP, data);
-    }
+    return await response.json();
   } catch (err) {
     console.error('Error loading background map JSON:', err);
+    return null;
   }
 }
 
@@ -46,7 +44,7 @@ window.setBackground = function (state) {
 
   // The updateBackgroundLinks function is now in commit-banner.js,
   // but since that file is loaded first, we can rely on it being available.
-  const updateBackgroundLinks = window.updateBackgroundLinks || function () {}; // Fallback
+  const updateBackgroundLinks = window.updateBackgroundLinks || function () { }; // Fallback
 
   if (state === 'on' && bgUrl) {
     body.style.backgroundImage = `url('_static/images/backgrounds/${bgUrl}.jpg')`;
@@ -75,6 +73,11 @@ window.setBackground = function (state) {
 // Wait for the document to fully load, load the map, then apply preference.
 
 document.addEventListener('DOMContentLoaded', async function () {
-  await loadBackgroundMap();
+  const data = await loadBackgroundMap();
+  if (data && typeof data === 'object' && !Array.isArray(data)) {
+    Object.assign(BG_MAP, data);
+  } else if (data) {
+    console.warn('Loaded background map from JSON is not a valid object; background images will be disabled.');
+  }
   loadBackgroundPreference();
 });
