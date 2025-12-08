@@ -1,4 +1,3 @@
-// Map page IDs to their corresponding background image URLs
 const BG_MAP = {
   'shades-games-club': 'the-big-issue',
   'first-event': 'first-event-second-game',
@@ -21,6 +20,39 @@ const BG_MAP = {
 const BACKGROUND_KEY = 'sphinx_background_preference';
 
 /**
+ * Load the background map from a JSON file.
+ * Returns a Promise that resolves when BG_MAP is populated.
+ */
+function loadBackgroundMap() {
+  // Assuming the JSON file is located relative to the static assets.
+  const jsonUrl = '_static/data/backgrounds.json';
+  return fetch(jsonUrl)
+    .then((response) => {
+      if (!response.ok) {
+        console.warn('Failed to load background map JSON, using fallback map.');
+        return null;
+      }
+      return response.json();
+    })
+    .then((data) => {
+      if (data) {
+        Object.assign(BG_MAP, data);
+      }
+    })
+    .catch((err) => {
+      console.error('Error loading background map JSON:', err);
+    });
+}
+
+/**
+ * Load user's background preference and apply it.
+ */
+function loadBackgroundPreference() {
+  const storedBackground = localStorage.getItem(BACKGROUND_KEY) || 'on';
+  window.setBackground(storedBackground);
+}
+
+/**
  * Public function to turn the background image on or off.
  * Defined globally so the HTML `href="javascript:setBackground(...)` works.
  * @param {string} state - 'on' or 'off'
@@ -36,7 +68,7 @@ window.setBackground = function (state) {
 
   // The updateBackgroundLinks function is now in commit-banner.js,
   // but since that file is loaded first, we can rely on it being available.
-  const updateBackgroundLinks = window.updateBackgroundLinks || function () {}; // Fallback
+  const updateBackgroundLinks = window.updateBackgroundLinks || function () { }; // Fallback
 
   if (state === 'on' && bgUrl) {
     body.style.backgroundImage = `url('_static/images/backgrounds/${bgUrl}.jpg')`;
@@ -62,12 +94,11 @@ window.setBackground = function (state) {
   updateBackgroundLinks(state);
 };
 
-function loadBackgroundPreference() {
-  const storedBackground = localStorage.getItem(BACKGROUND_KEY) || 'on';
-  window.setBackground(storedBackground); // Use the global function
-}
 
-// Wait for the document to fully load and load background preference
+// Wait for the document to fully load, load the map, then apply preference.
+
 document.addEventListener('DOMContentLoaded', function () {
-  loadBackgroundPreference();
+  loadBackgroundMap().then(() => {
+    loadBackgroundPreference();
+  });
 });
