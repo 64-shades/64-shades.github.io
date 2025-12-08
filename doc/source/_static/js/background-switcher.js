@@ -6,11 +6,11 @@ const BACKGROUND_KEY = 'sphinx_background_preference';
  * Load the background map from a JSON file using async/await.
  */
 async function loadBackgroundMap() {
-  const jsonUrl = '_static/data/backgrounds.json';
+  const jsonUrl = (window.DOCUMENTATION_OPTIONS?.URL_ROOT || '') + '_static/data/backgrounds.json';
   try {
     const response = await fetch(jsonUrl);
     if (!response.ok) {
-      console.warn('Failed to load background map JSON, using fallback map.');
+      console.warn('Failed to load background map JSON; background images will be disabled.');
       return;
     }
     const data = await response.json();
