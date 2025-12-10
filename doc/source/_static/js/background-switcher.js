@@ -1,24 +1,32 @@
-// Map page IDs to their corresponding background image URLs
-const BG_MAP = {
-  'shades-games-club': 'the-big-issue',
-  'first-event': 'first-event-second-game',
-  'second-event': 'second-event',
-  'third-event': 'third-event-beers-in-play',
-  'fourth-event': 'fourth-event',
-  'fifth-event': 'fifth-event',
-  'sixth-event': 'sixth-event',
-  catan: 'catan',
-  chess: 'chess',
-  'c-o-o-l-chess': 'cool-chess',
-  harmegedo: 'harmegedo',
-  'history-of-64-shades': 'history',
-  quaternity: 'quaternity-wooden-set',
-  'the-first-challenger': 'first-event-first-game',
-  'top-pitfalls': 'top-pitfalls',
-  'uno-show-em-no-mercy': 'uno-show-em-no-mercy',
-};
+const BG_MAP = {};
 
 const BACKGROUND_KEY = 'sphinx_background_preference';
+
+/**
+ * Load the background map from a JSON file using async/await.
+ */
+async function loadBackgroundMap() {
+  const jsonUrl = (window.DOCUMENTATION_OPTIONS?.URL_ROOT || '') + '_static/data/backgrounds.json';
+  try {
+    const response = await fetch(jsonUrl);
+    if (!response.ok) {
+      console.warn('Failed to load background map JSON; background images will be disabled.');
+      return null;
+    }
+    return await response.json();
+  } catch (err) {
+    console.error('Error loading background map JSON:', err);
+    return null;
+  }
+}
+
+/**
+ * Load user's background preference and apply it.
+ */
+function loadBackgroundPreference() {
+  const storedBackground = localStorage.getItem(BACKGROUND_KEY) || 'on';
+  window.setBackground(storedBackground);
+}
 
 /**
  * Public function to turn the background image on or off.
@@ -62,12 +70,16 @@ window.setBackground = function (state) {
   updateBackgroundLinks(state);
 };
 
-function loadBackgroundPreference() {
-  const storedBackground = localStorage.getItem(BACKGROUND_KEY) || 'on';
-  window.setBackground(storedBackground); // Use the global function
-}
+// Wait for the document to fully load, load the map, then apply preference.
 
-// Wait for the document to fully load and load background preference
-document.addEventListener('DOMContentLoaded', function () {
+document.addEventListener('DOMContentLoaded', async function () {
+  const data = await loadBackgroundMap();
+  if (Object.prototype.toString.call(data) === '[object Object]') {
+    Object.assign(BG_MAP, data);
+  } else if (data) {
+    console.warn(
+      'Loaded background map from JSON is not a valid object; background images will be disabled.',
+    );
+  }
   loadBackgroundPreference();
 });
