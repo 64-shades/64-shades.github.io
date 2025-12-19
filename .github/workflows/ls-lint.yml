@@ -1,7 +1,7 @@
 ---
 name: 🧹 ls-lint
 
-on:
+"on":
   push:
     branches:
       - main

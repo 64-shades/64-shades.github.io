@@ -1,6 +1,7 @@
-name: 🛡️ CodeQL Analysis
+---
+name: 'CodeQL Analysis'
 
-on:
+on:  # yamllint disable-line rule:truthy
   push:
     branches: [main]
   pull_request:
