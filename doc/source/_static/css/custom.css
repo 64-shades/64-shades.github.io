@@ -3,113 +3,135 @@
 /* Light Theme Variables (Default) */
 :root,
 body.light-theme {
-    /* Primary Colors */
-    --text-color: #333;             /* Dark Gray */
-    --heading-color: #1a1a1a;        /* Very Dark Gray */
-    --main-bg-color: #fff;          /* White */
-    --sidebar-bg-color: rgba(255, 255, 255, 0.9); /* White (Slight transparency) */
-    --border-color: #e0e0e0;        /* Light Gray Border */
-    --link-color: #007bff;          /* Blue Link */
-    --link-hover-color: #0056b3;    /* Darker Blue */
-    --current-link-color: #1a1a1a;  /* Current Link Black */
-    --search-bg-color: #fff;        /* Search Box White */
-    --footer-bg-color: #000;        /* Footer Black */
-    --footer-text-color: #fff;      /* Footer White */
+  /* Primary Colors */
+  --text-color: #333; /* Dark Gray */
+  --heading-color: #1a1a1a; /* Very Dark Gray */
+  --main-bg-color: #fff; /* White */
+  --sidebar-bg-color: rgba(
+    255,
+    255,
+    255,
+    0.9
+  ); /* White (Slight transparency) */
+  --border-color: #e0e0e0; /* Light Gray Border */
+  --link-color: #007bff; /* Blue Link */
+  --link-hover-color: #0056b3; /* Darker Blue */
+  --current-link-color: #1a1a1a; /* Current Link Black */
+  --search-bg-color: #fff; /* Search Box White */
+  --footer-bg-color: #000; /* Footer Black */
+  --footer-text-color: #fff; /* Footer White */
 }
 
 /* Dark Theme Variables */
 body.dark-theme {
-    /* Primary Colors */
-    --text-color: #c9c9c9;          /* Light Gray */
-    --heading-color: red;   /* Off-White */
-    --main-bg-color: #282c34;       /* Charcoal Main Background */
-    --sidebar-bg-color: rgba(40, 44, 52, 0.9); /* Charcoal (Slight transparency) */
-    --border-color: #3e4451;        /* Darker Border */
-    --link-color: #92b0ff;          /* Light Blue Link */
-    --link-hover-color: #a8c1ff;    /* Lighter Blue */
-    --current-link-color: #ffffff;  /* Current Link White */
-    --search-bg-color: #3e4451;     /* Search Box Dark Gray */
-    --footer-bg-color: #1a1a1a;     /* Footer Dark Gray */
-    --footer-text-color: #c9c9c9;   /* Footer Light Gray */
+  /* Primary Colors */
+  --text-color: #c9c9c9; /* Light Gray */
+  --heading-color: red; /* Off-White */
+  --main-bg-color: #282c34; /* Charcoal Main Background */
+  --sidebar-bg-color: rgba(
+    40,
+    44,
+    52,
+    0.9
+  ); /* Charcoal (Slight transparency) */
+  --border-color: #3e4451; /* Darker Border */
+  --link-color: #92b0ff; /* Light Blue Link */
+  --link-hover-color: #a8c1ff; /* Lighter Blue */
+  --current-link-color: #ffffff; /* Current Link White */
+  --search-bg-color: #3e4451; /* Search Box Dark Gray */
+  --footer-bg-color: #1a1a1a; /* Footer Dark Gray */
+  --footer-text-color: #c9c9c9; /* Footer Light Gray */
 }
 
 /* --- 2. Apply Variables to Global Elements --- */
 
 /* Apply to the main body and body wrapper */
 body {
-    color: var(--text-color);
-    background-color: var(--main-bg-color); /* Fallback if no background image */
-    transition: background-color 0.3s, color 0.3s;
+  color: var(--text-color);
+  background-color: var(--main-bg-color); /* Fallback if no background image */
+  transition:
+    background-color 0.3s,
+    color 0.3s;
 }
 
 /* Ensure headings use the heading color */
-h1, h2, h3, h4, h5, h6,
-div.document > h1, div.document > h2, div.document > h3 {
-    color: var(--heading-color);
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+div.document > h1,
+div.document > h2,
+div.document > h3 {
+  color: var(--heading-color);
 }
 
 /* --- 3. Sidebar Styling --- */
 
 /* Target the main sidebar wrapper */
 div.sphinxsidebar {
-    background: var(--sidebar-bg-color) !important;
-    border-right: 1px solid var(--border-color);
-    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.2); /* Keep shadow dark */
-    color: var(--text-color);
-    transition: background-color 0.3s, color 0.3s;
+  background: var(--sidebar-bg-color) !important;
+  border-right: 1px solid var(--border-color);
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.2); /* Keep shadow dark */
+  color: var(--text-color);
+  transition:
+    background-color 0.3s,
+    color 0.3s;
 }
 
 /* Sidebar Headings */
 div.sphinxsidebar h1,
 div.sphinxsidebar h3,
 div.sphinxsidebar .caption {
-    color: var(--heading-color);
+  color: var(--heading-color);
 }
 
 /* Sidebar Normal Links */
 div.sphinxsidebar a {
-    color: var(--link-color);
-    text-decoration: none;
+  color: var(--link-color);
+  text-decoration: none;
 }
 
 /* Sidebar Links on Hover */
 div.sphinxsidebar a:hover {
-    color: var(--link-hover-color);
-    text-decoration: underline;
+  color: var(--link-hover-color);
+  text-decoration: underline;
 }
 
 /* Fix Current/Active Navigation Links */
 div.sphinxsidebar li.toctree-l1.current > a,
 div.sphinxsidebar li.toctree-l2.current > a {
-    font-weight: bold;
-    color: var(--current-link-color) !important;
-    border-left: 3px solid var(--link-color); /* Use the standard link color for the border */
-    padding-left: 5px;
+  font-weight: bold;
+  color: var(--current-link-color) !important;
+  border-left: 3px solid var(--link-color); /* Use the standard link color for the border */
+  padding-left: 5px;
 }
 
 /* Ensure the link text for all navigation items is dark/correct */
-div.sphinxsidebar ul li a, div.sphinxsidebar p {
-    color: var(--text-color);
-    padding-left: 8px;
+div.sphinxsidebar ul li a,
+div.sphinxsidebar p {
+  color: var(--text-color);
+  padding-left: 8px;
 }
 
 /* --- 4. Search Box Text --- */
 
 #searchbox input[type="text"] {
-    color: var(--text-color);
-    border: 1px solid var(--border-color);
-    background-color: var(--search-bg-color);
+  color: var(--text-color);
+  border: 1px solid var(--border-color);
+  background-color: var(--search-bg-color);
 }
 
 /* --- 5. Footer Styling --- */
 
 .footer {
-    background: var(--footer-bg-color);
-    color: var(--footer-text-color);
+  background: var(--footer-bg-color);
+  color: var(--footer-text-color);
 }
 
 .footer a {
-    color: var(--link-color);
+  color: var(--link-color);
 }
 
 /* --- 6. Content Wrapper for Background Image Setting --- */
@@ -117,69 +139,69 @@ div.sphinxsidebar ul li a, div.sphinxsidebar p {
 /* When background is OFF, bodywrapper uses the main-bg-color (light/dark). */
 
 .bodywrapper {
-    background-color: var(--main-bg-color);
-    /* Transition to smooth the background change when toggling background image */
-    transition: background-color 0.3s;
+  background-color: var(--main-bg-color);
+  /* Transition to smooth the background change when toggling background image */
+  transition: background-color 0.3s;
 }
 
 body.dark-theme .bodywrapper .body {
-    --heading-color: black;
+  --heading-color: black;
 }
 
 #rellinks {
-    background-color: orange;
+  background-color: orange;
 }
 
 /* --- New 7. Random Theme Overrides --- */
 
 /* Define the new CSS variables for random colors (they will be set via JS) */
 :root {
-    --random-main-bg-color: #282c34;     /* Default Dark */
-    --random-text-color: #c9c9c9;        /* Default Light Gray */
-    --random-heading-color: #ffffff;     /* Default White */
-    --random-link-color: #92b0ff;        /* Default Blue */
-    --random-link-hover-color: #a8c1ff;
-    --random-sidebar-bg-color: rgba(40, 44, 52, 0.9);
-    --random-border-color: #3e4451;
-    --random-footer-bg-color: #1a1a1a;
+  --random-main-bg-color: #282c34; /* Default Dark */
+  --random-text-color: #c9c9c9; /* Default Light Gray */
+  --random-heading-color: #ffffff; /* Default White */
+  --random-link-color: #92b0ff; /* Default Blue */
+  --random-link-hover-color: #a8c1ff;
+  --random-sidebar-bg-color: rgba(40, 44, 52, 0.9);
+  --random-border-color: #3e4451;
+  --random-footer-bg-color: #1a1a1a;
 }
 
 /* Apply the custom random variables when the body has the custom-random-theme class */
 body.custom-random-theme {
-    /* Primary Colors */
-    --text-color: var(--random-text-color);
-    --heading-color: var(--random-heading-color);
-    --main-bg-color: var(--random-main-bg-color);
-    --sidebar-bg-color: var(--random-sidebar-bg-color);
-    --border-color: var(--random-border-color);
-    --link-color: var(--random-link-color);
-    --link-hover-color: var(--random-link-hover-color);
-    --current-link-color: var(--random-heading-color); /* Use a bright color */
-    --search-bg-color: var(--random-border-color); /* Use a darker color */
-    --footer-bg-color: var(--random-footer-bg-color);
-    --footer-text-color: var(--random-text-color);
+  /* Primary Colors */
+  --text-color: var(--random-text-color);
+  --heading-color: var(--random-heading-color);
+  --main-bg-color: var(--random-main-bg-color);
+  --sidebar-bg-color: var(--random-sidebar-bg-color);
+  --border-color: var(--random-border-color);
+  --link-color: var(--random-link-color);
+  --link-hover-color: var(--random-link-hover-color);
+  --current-link-color: var(--random-heading-color); /* Use a bright color */
+  --search-bg-color: var(--random-border-color); /* Use a darker color */
+  --footer-bg-color: var(--random-footer-bg-color);
+  --footer-text-color: var(--random-text-color);
 }
 /* Ensure the bodywrapper also uses the random background color if background image is off */
 body.custom-random-theme .bodywrapper {
-    background-color: var(--random-main-bg-color);
+  background-color: var(--random-main-bg-color);
 }
 
 /* --- New 8. Custom Vertical Orange Gradient for bodywrapper --- */
 
 /* Target the bodywrapper element for the gradient background */
 .bodywrapper .body {
-    background-image: linear-gradient(
-        to bottom,
-        #FFF3E0 0%,      /* Very Light Orange / Creamy */
-        #FFB74D 50%,      /* Medium Orange */
-        #E65100 100%      /* Dark Orange */
-    ) !important;
+  background-image: linear-gradient(
+    to bottom,
+    #fff3e0 0%,
+    /* Very Light Orange / Creamy */ #ffb74d 50%,
+    /* Medium Orange */ #e65100 100% /* Dark Orange */
+  ) !important;
 
-    /* Fallback color for non-supporting browsers */
-    background-color: #E65100;
+  /* Fallback color for non-supporting browsers */
+  background-color: #e65100;
 }
 
 div.body {
-    padding-left: 40px;
-    padding-right: 40px;
+  padding-left: 40px;
+  padding-right: 40px;
 }

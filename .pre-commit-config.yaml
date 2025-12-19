@@ -3,7 +3,7 @@ default_stages: [pre-commit, pre-push]
 default_language_version:
   python: python3
   node: 22.18.0
-minimum_pre_commit_version: '3.2.0'
+minimum_pre_commit_version: "3.2.0"
 repos:
   - repo: meta
     hooks:
@@ -26,6 +26,6 @@ repos:
       - id: chmod
         name: Set file permissions
         description: Does not run on Windows so setup as a manual hook
-        args: ['644']
+        args: ["644"]
         files: \.md$
         stages: [manual]
