@@ -30,6 +30,7 @@ This site is built using ...
 
 ### Framework
 
+- [Alabaster](https://alabaster.readthedocs.io/) is a visually (c)lean, responsive, configurable theme for the Sphinx documentation system. It requires Python 3.10 or newer and Sphinx 6.2 or newer.
 - [CSS](https://en.wikipedia.org/wiki/CSS), or Cascading Style Sheets, is a stylesheet language used to describe the presentation and styling
   of a document written in a markup language, most commonly HTML. It is a fundamental technology of the World Wide Web,
   working alongside HTML and JavaScript to create interactive and visually appealing websites.
@@ -37,6 +38,7 @@ This site is built using ...
 - [JavaScript](https://en.wikipedia.org/wiki/JavaScript) is a programming language and core technology of the web platform, alongside HTML and CSS.
   Ninety-nine percent of websites on the World Wide Web use JavaScript on the client side for webpage behavior.
   Web browsers have a dedicated JavaScript engine that executes the client code.
+- [JSON](https://www.json.org), or JavaScript Object Notation, is a lightweight data-interchange format that is easy for humans to read and easy for machines to parse. It's widely used to transmit data between a server and a web application and is a common format for APIs and configuration files. While its roots are in JavaScript, JSON is language-independent and supported by most modern programming languages.
 - [Makefiles](<https://en.wikipedia.org/wiki/Make_(software)>) are text files that contain instructions for the make utility, a build automation tool commonly used in Unix-like operating systems. They define how to build or update target files (like executables or libraries) from source files,
   managing dependencies and executing commands.
 - [Python](https://www.python.org/) is a programming language that lets you work quickly and integrate systems more effectively.
@@ -46,6 +48,7 @@ This site is built using ...
   technical documentation, including Python's official documentation and documentation for many Python libraries.
 - [Sphinx](https://www.sphinx-doc.org/en/master/) is a powerful and widely-used documentation generator written in Python. It is particularly popular
   within the Python community and is considered the de facto standard for documenting Python projects.
+- [YAML](https://yaml.org) is a human-readable data serialization language commonly used for configuration files and data exchange between programming languages. It uses Python-style indentation and key-value pairs to represent data structures, making it easy to read and write.
 
 ---
 

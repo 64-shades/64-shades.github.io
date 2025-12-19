@@ -16,6 +16,9 @@ build:
     - texlive-latex-extra
     - texlive-fonts-recommended
     - latexmk
+  jobs:
+    pre_build:
+      - python doc/generate_commits.py
 
 # Build documentation in the "docs/" directory with Sphinx
 sphinx:

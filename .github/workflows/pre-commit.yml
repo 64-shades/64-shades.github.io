@@ -20,14 +20,8 @@ jobs:
         python-version: ["3.13"]
 
     steps:
-      - name: 🍎 Fix macOS gettext issue
-        if: runner.os == 'macOS'
-        run: |
-          brew install gettext
-          brew link --force gettext
-
       - name: ↩️ Checkout code
-        uses: actions/checkout@v5
+        uses: actions/checkout@v6
 
       - name: 🔧 Set up Python ${{ matrix.python-version }}
         uses: actions/setup-python@v6
@@ -40,13 +34,13 @@ jobs:
         run: echo "PY=$(python -VV | sha256sum | cut -d' ' -f1)" >> "$GITHUB_ENV"
 
       - name: 💾 Cache pre-commit hooks
-        uses: actions/cache@v4
+        uses: actions/cache@v5
         with:
           path: ~/.cache/pre-commit
           key: pre-commit|${{ runner.os }}|${{ env.PY }}|${{ hashFiles('.pre-commit-config.yaml') }}
 
       - name: 💾 Cache pip downloads
-        uses: actions/cache@v4
+        uses: actions/cache@v5
         with:
           path: ~/.cache/pip
           key: pip|${{ runner.os }}|${{ env.PY }}|${{ hashFiles('**/requirements*.txt', '.pre-commit-config.yaml') }}
@@ -57,6 +51,6 @@ jobs:
           pip install -r requirements-dev.txt
 
       - name: 🏃🏻‍♂️‍➡️ Run pre-commit
-        run: pre-commit run --all-files
-      - name: 🏃🏻‍♂️‍➡️ Run pre-commit
-        run: pre-commit run --all-files --hook-stage manual
+        run: pre-commit run --color=always --all-files
+      - name: 🏃🏻‍♂️‍➡️ Run pre-commit (manual hooks)
+        run: pre-commit run --color=always --all-files --hook-stage manual

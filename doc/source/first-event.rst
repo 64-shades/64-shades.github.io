@@ -8,9 +8,10 @@ Wednesday 8th of October 4:30pm until about 6:15pm
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 The very first event for our club was a success since
-two games of chess were played.
+two games of chess were played and we met a another great
+bunch of people.
 
-3 people attended this meetup including myself an older
+3 people attended this meetup including myself, an older
 man and Henry a worker at the Hotel. We sat at table 7
 and I won both games. First I played Henry with 8 minutes
 each and won with checkmate. In the second game with the

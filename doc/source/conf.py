@@ -31,6 +31,7 @@ nitpicky = True
 
 html_theme = "alabaster"
 html_static_path = ["_static"]
+html_extra_path = ["_generated_static"]
 
 html_logo = "_static/images/logo.jpeg"
 
@@ -38,12 +39,10 @@ html_logo = "_static/images/logo.jpeg"
 html_favicon = "_static/images/favicon.ico"
 
 # Add your custom CSS file (updated to use the new CSS variables)
-html_css_files = ["css/custom.css"]
+html_css_files = []
 
 # NEW: Rename and update the JS file to handle both background and theme switching
-html_js_files = [
-    "js/theme_and_background_switcher.js",
-]
+html_js_files = []
 
 # NEW: This includes the theme switcher controls in the sidebar
 html_sidebars = {
@@ -52,7 +51,6 @@ html_sidebars = {
         "navigation.html",  # Default: Table of contents
         "relations.html",  # Default: Next/Previous links
         "searchbox.html",  # Default: Search box
-        "sidebar_theme_switcher.html",  # CUSTOM: Our new template for the switcher
         "sidebar_lichess_puzzle.html",
         "sidebar_we_support.html",
     ]

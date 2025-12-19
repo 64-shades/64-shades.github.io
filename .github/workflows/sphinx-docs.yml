@@ -1,4 +1,4 @@
-name: Sphinx Docs Build
+name: ⚒️ Sphinx Docs Build
 
 on:
   push:
@@ -11,10 +11,11 @@ permissions:
 
 jobs:
   build-docs:
+    name: 👷‍♂️ Build Documentation
     runs-on: ubuntu-latest
     steps:
       - name: Checkout code
-        uses: actions/checkout@v5
+        uses: actions/checkout@v6
       - name: Set up Python
         uses: actions/setup-python@v6
         with:

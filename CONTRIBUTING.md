@@ -16,23 +16,23 @@ Thank you for your interest in contributing to En Passant documentation! We welc
 
 2. **Clone your fork**
 
-```bash
-   git clone https://github.com/YOUR_USERNAME/64-shades.github.io.git
-   cd 64-shades.github.io
-```
+   ```bash
+      git clone https://github.com/YOUR_USERNAME/64-shades.github.io.git
+      cd 64-shades.github.io
+   ```
 
 3. **Install dependencies**
 
-```bash
-   cd doc
-   pip install -r requirements-docs.txt
-```
+   ```bash
+      cd doc
+      pip install -r requirements-docs.txt
+   ```
 
 4. **Create a branch for your changes**
 
-```bash
-   git checkout -b fix/your-fix-name
-```
+   ```bash
+      git checkout -b fix/your-fix-name
+   ```
 
 Use prefixes like `fix/`, `feature/`, `docs/`, or `update/` for your branch names.
 
