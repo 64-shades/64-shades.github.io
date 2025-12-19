@@ -1,7 +1,7 @@
 ---
 name: Run pre-commit
 
-"on":
+'on':
   push:
     branches: [main]
   pull_request:
@@ -12,13 +12,13 @@ permissions:
 
 jobs:
   pre-commit:
-    name: 🏃🏼 Pre-commit on ${{ matrix.os }} / Python ${{ matrix.python-version }}  # yamllint disable-line rule:line-length
+    name: 🏃🏼 Pre-commit on ${{ matrix.os }} / Python ${{ matrix.python-version }} # yamllint disable-line rule:line-length
     runs-on: ${{ matrix.os }}
 
     strategy:
       matrix:
         os: [ubuntu-latest, macos-latest]
-        python-version: ["3.13"]
+        python-version: ['3.13']
 
     steps:
       - name: ↩️ Checkout code
@@ -28,11 +28,11 @@ jobs:
         uses: actions/setup-python@v6
         with:
           python-version: ${{ matrix.python-version }}
-          architecture: "x64"
+          architecture: 'x64'
 
       - name: 🪛 Set PY (Python version hash)
         shell: bash
-        run: echo "PY=$(python -VV | sha256sum | cut -d' ' -f1)" >> "$GITHUB_ENV"  # yamllint disable-line rule:line-length
+        run: echo "PY=$(python -VV | sha256sum | cut -d' ' -f1)" >> "$GITHUB_ENV" # yamllint disable-line rule:line-length
 
       - name: 💾 Cache pre-commit hooks
         uses: actions/cache@v5

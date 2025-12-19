@@ -22,7 +22,7 @@ repos:
       - id: prettier
         name: run prettier
         description: format files with prettier
-        entry: prettier --write '**/*.html' '**/*.js' '**/*.json' '**/*.md' '**/*.yaml' '**/*.yml'  # yamllint disable-line rule:line-length
+        entry: prettier --write '**/*.html' '**/*.js' '**/*.json' '**/*.md' '**/*.yaml' '**/*.yml' # yamllint disable-line rule:line-length
         files: \.(html|json|md|ya?ml)$
         language: node
         additional_dependencies: ['prettier@3.7.4']
@@ -51,7 +51,7 @@ repos:
     rev: v6.0.0
     hooks:
       - id: check-case-conflict
-        description: Check for files with names that would conflict on a case-insensitive filesystem like MacOS HFS+ or Windows FAT.  # yamllint disable-line rule:line-length
+        description: Check for files with names that would conflict on a case-insensitive filesystem like MacOS HFS+ or Windows FAT. # yamllint disable-line rule:line-length
       - id: check-illegal-windows-names
         description: Check for files that cannot be created on Windows.
       - id: check-json
@@ -65,7 +65,7 @@ repos:
       - id: check-yaml
         description: Attempts to load all yaml files to verify syntax.
       - id: detect-aws-credentials
-        description: Checks for the existence of AWS secrets that you have set up with the AWS CLI.  # yamllint disable-line rule:line-length
+        description: Checks for the existence of AWS secrets that you have set up with the AWS CLI. # yamllint disable-line rule:line-length
         args: [--allow-missing-credentials]
       - id: detect-private-key
         description: Checks for the existence of private keys.
@@ -93,28 +93,28 @@ repos:
     hooks:
       - id: python-check-mock-methods
         name: run check for not-real mock methods
-        description: Prevent common mistakes of assert mck.not_called(), assert mck.called_once_with(...) and mck.assert_called  # yamllint disable-line rule:line-length
+        description: Prevent common mistakes of assert mck.not_called(), assert mck.called_once_with(...) and mck.assert_called # yamllint disable-line rule:line-length
       - id: python-no-eval
         name: run check for eval()
         description: A quick check for the eval() built-in function
       - id: python-no-log-warn
         name: run check for use logger.warning(
-        description: A quick check for the deprecated .warn() method of python loggers  # yamllint disable-line rule:line-length
+        description: A quick check for the deprecated .warn() method of python loggers # yamllint disable-line rule:line-length
       - id: python-use-type-annotations
         name: run check for type annotations not comments
-        description: Enforce that python3.6+ type annotations are used instead of type comments  # yamllint disable-line rule:line-length
+        description: Enforce that python3.6+ type annotations are used instead of type comments # yamllint disable-line rule:line-length
       - id: rst-backticks
         name: run rst-backticks
-        description: detect common mistake of using single backticks when writing rst  # yamllint disable-line rule:line-length
+        description: detect common mistake of using single backticks when writing rst # yamllint disable-line rule:line-length
       - id: rst-directive-colons
         name: run rst-directive-colons
-        description: detect mistake of rst directive not ending with double colon or space before the double colon  # yamllint disable-line rule:line-length
+        description: detect mistake of rst directive not ending with double colon or space before the double colon # yamllint disable-line rule:line-length
       - id: rst-inline-touching-normal
         name: run rst-inline-touching-normal
         description: detect mistake of inline code touching normal text in rst
       - id: text-unicode-replacement-char
         name: run check for no unicode replacement char
-        description: Forbid files which have a UTF-8 Unicode replacement character  # yamllint disable-line rule:line-length
+        description: Forbid files which have a UTF-8 Unicode replacement character # yamllint disable-line rule:line-length
   - repo: https://github.com/igorshubovych/markdownlint-cli
     rev: v0.45.0
     hooks:

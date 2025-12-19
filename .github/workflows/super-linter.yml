@@ -2,11 +2,9 @@
 ---
 name: Super-Linter
 
-"on":
+'on':
   push:
-    branches:
-      # - main
-      # - master
+    branches: []
   pull_request:
     branches:
       - main
@@ -19,9 +17,9 @@ jobs:
     name: 🧹🪣 Lint Code Base
     runs-on: ubuntu-latest
     permissions:
-      contents: read  # for actions/checkout to fetch code
-      statuses: write  # for super-linter to mark status of each linter run
-      packages: read  # To fetch super-linter/super-linter from ghcr.io
+      contents: read # for actions/checkout to fetch code
+      statuses: write # for super-linter to mark status of each linter run
+      packages: read # To fetch super-linter/super-linter from ghcr.io
     steps:
       - name: 'Checkout ${{ github.ref }} ( ${{ github.sha }} )'
         uses: actions/checkout@v6

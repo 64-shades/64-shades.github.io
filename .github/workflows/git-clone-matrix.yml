@@ -1,7 +1,7 @@
 ---
 name: 🧪 Git Clone Matrix Test
 
-"on":
+'on':
   push:
     branches:
       - main
@@ -26,6 +26,7 @@ jobs:
         uses: actions/checkout@v6
 
       - name: Run 🏃 git clone test
+        shell: bash
         run: |
           git clone \
             https://github.com/brisbanesocialchess/brisbanesocialchess.github.io.git
