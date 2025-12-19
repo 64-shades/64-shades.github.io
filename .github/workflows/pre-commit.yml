@@ -1,6 +1,7 @@
-name: 🏃🏼 Run pre-commit
+---
+name: Run pre-commit
 
-on:
+'on':
   push:
     branches: [main]
   pull_request:
@@ -11,7 +12,7 @@ permissions:
 
 jobs:
   pre-commit:
-    name: 🏃🏼 Pre-commit on ${{ matrix.os }} / Python ${{ matrix.python-version }}
+    name: 🏃🏼 Pre-commit on ${{ matrix.os }} / Python ${{ matrix.python-version }} # yamllint disable-line rule:line-length
     runs-on: ${{ matrix.os }}
 
     strategy:
@@ -31,18 +32,20 @@ jobs:
 
       - name: 🪛 Set PY (Python version hash)
         shell: bash
-        run: echo "PY=$(python -VV | sha256sum | cut -d' ' -f1)" >> "$GITHUB_ENV"
+        run: echo "PY=$(python -VV | sha256sum | cut -d' ' -f1)" >> "$GITHUB_ENV" # yamllint disable-line rule:line-length
 
       - name: 💾 Cache pre-commit hooks
         uses: actions/cache@v5
         with:
           path: ~/.cache/pre-commit
+          # yamllint disable-line rule:line-length
           key: pre-commit|${{ runner.os }}|${{ env.PY }}|${{ hashFiles('.pre-commit-config.yaml') }}
 
       - name: 💾 Cache pip downloads
         uses: actions/cache@v5
         with:
           path: ~/.cache/pip
+          # yamllint disable-line rule:line-length
           key: pip|${{ runner.os }}|${{ env.PY }}|${{ hashFiles('**/requirements*.txt', '.pre-commit-config.yaml') }}
 
       - name: 🪛 Install dependencies

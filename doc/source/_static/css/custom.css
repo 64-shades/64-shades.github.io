@@ -3,308 +3,331 @@
 /* Light Theme Variables (Default) */
 :root,
 body.light-theme {
-    /* Primary Colors */
-    --text-color: #333;             /* Dark Gray */
-    --heading-color: #1a1a1a;        /* Very Dark Gray */
-    --main-bg-color: #fff;          /* White */
-    --sidebar-bg-color: rgba(255, 255, 255, 0.9); /* White (Slight transparency) */
-    --border-color: #e0e0e0;        /* Light Gray Border */
-    --link-color: #007bff;          /* Blue Link */
-    --link-hover-color: #0056b3;    /* Darker Blue */
-    --current-link-color: #1a1a1a;  /* Current Link Black */
-    --search-bg-color: #fff;        /* Search Box White */
-    --footer-bg-color: #000;        /* Footer Black */
-    --footer-text-color: #fff;      /* Footer White */
+	/* Primary Colors */
+	--text-color: #333; /* Dark Gray */
+	--heading-color: #1a1a1a; /* Very Dark Gray */
+	--main-bg-color: #fff; /* White */
+	--sidebar-bg-color: rgba(
+		255,
+		255,
+		255,
+		0.9
+	); /* White (Slight transparency) */
+	--border-color: #e0e0e0; /* Light Gray Border */
+	--link-color: #007bff; /* Blue Link */
+	--link-hover-color: #0056b3; /* Darker Blue */
+	--current-link-color: #1a1a1a; /* Current Link Black */
+	--search-bg-color: #fff; /* Search Box White */
+	--footer-bg-color: #000; /* Footer Black */
+	--footer-text-color: #fff; /* Footer White */
 
-    /* Commit Specific Colors (Light) */
-    --commit-link-color: #0077aa;
-    --commit-date-color: red;
+	/* Commit Specific Colors (Light) */
+	--commit-link-color: #0077aa;
+	--commit-date-color: red;
 }
 
 /* Dark Theme Variables */
 body.dark-theme {
-    /* Primary Colors */
-    --text-color: #c9c9c9;          /* Light Gray */
-    --heading-color: red;           /* Off-White */
-    --main-bg-color: #282c34;       /* Charcoal Main Background */
-    --sidebar-bg-color: rgba(40, 44, 52, 0.9); /* Charcoal (Slight transparency) */
-    --border-color: #3e4451;        /* Darker Border */
-    --link-color: #92b0ff;          /* Light Blue Link */
-    --link-hover-color: #a8c1ff;    /* Lighter Blue */
-    --current-link-color: #ffffff;  /* Current Link White */
-    --search-bg-color: #3e4451;     /* Search Box Dark Gray */
-    --footer-bg-color: #1a1a1a;     /* Footer Dark Gray */
-    --footer-text-color: #c9c9c9;   /* Footer Light Gray */
+	/* Primary Colors */
+	--text-color: #c9c9c9; /* Light Gray */
+	--heading-color: red; /* Off-White */
+	--main-bg-color: #282c34; /* Charcoal Main Background */
+	--sidebar-bg-color: rgba(
+		40,
+		44,
+		52,
+		0.9
+	); /* Charcoal (Slight transparency) */
+	--border-color: #3e4451; /* Darker Border */
+	--link-color: #92b0ff; /* Light Blue Link */
+	--link-hover-color: #a8c1ff; /* Lighter Blue */
+	--current-link-color: #ffffff; /* Current Link White */
+	--search-bg-color: #3e4451; /* Search Box Dark Gray */
+	--footer-bg-color: #1a1a1a; /* Footer Dark Gray */
+	--footer-text-color: #c9c9c9; /* Footer Light Gray */
 
-    /* Commit Specific Colors (Dark) */
-    --commit-link-color: var(--link-color); /* Use standard link color for visibility */
-    --commit-date-color: orange; /* Better visibility than red on dark background */
+	/* Commit Specific Colors (Dark) */
+	--commit-link-color: var(
+		--link-color
+	); /* Use standard link color for visibility */
+	--commit-date-color: orange; /* Better visibility than red on dark background */
 }
 
 /* --- 2. Apply Variables to Global Elements --- */
 
 body {
-    color: var(--text-color);
-    background-color: var(--main-bg-color);
-    transition: background-color 0.3s, color 0.3s;
+	color: var(--text-color);
+	background-color: var(--main-bg-color);
+	transition:
+		background-color 0.3s,
+		color 0.3s;
 }
 
-h1, h2, h3, h4, h5, h6,
-div.document > h1, div.document > h2, div.document > h3 {
-    color: var(--heading-color);
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+div.document > h1,
+div.document > h2,
+div.document > h3 {
+	color: var(--heading-color);
 }
 
 /* --- 3. Sidebar Styling --- */
 
 div.sphinxsidebar {
-    background: var(--sidebar-bg-color) !important;
-    border-right: 1px solid var(--border-color);
-    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.2);
-    color: var(--text-color);
-    transition: background-color 0.3s, color 0.3s;
+	background: var(--sidebar-bg-color) !important;
+	border-right: 1px solid var(--border-color);
+	box-shadow: 2px 0 5px rgba(0, 0, 0, 0.2);
+	color: var(--text-color);
+	transition:
+		background-color 0.3s,
+		color 0.3s;
 }
 
 div.sphinxsidebar h1,
 div.sphinxsidebar h3,
 div.sphinxsidebar .caption {
-    color: var(--heading-color);
+	color: var(--heading-color);
 }
 
 div.sphinxsidebar .caption {
-    font-size: 16pt;
+	font-size: 16pt;
 }
 
 div.sphinxsidebar a {
-    color: var(--link-color);
-    text-decoration: none;
+	color: var(--link-color);
+	text-decoration: none;
 }
 
 div.sphinxsidebar a:hover {
-    color: var(--link-hover-color);
-    text-decoration: underline;
+	color: var(--link-hover-color);
+	text-decoration: underline;
 }
 
 div.sphinxsidebar li.toctree-l1.current > a,
 div.sphinxsidebar li.toctree-l2.current > a {
-    font-weight: bold;
-    color: var(--current-link-color) !important;
-    border-left: 3px solid var(--link-color);
-    padding-left: 5px;
+	font-weight: bold;
+	color: var(--current-link-color) !important;
+	border-left: 3px solid var(--link-color);
+	padding-left: 5px;
 }
 
-div.sphinxsidebar ul li a, div.sphinxsidebar p {
-    color: var(--text-color);
-    padding-left: 8px;
+div.sphinxsidebar ul li a,
+div.sphinxsidebar p {
+	color: var(--text-color);
+	padding-left: 8px;
 }
 
 /* --- 4. Search Box Text --- */
 
 #searchbox input[type="text"] {
-    color: var(--text-color);
-    border: 1px solid var(--border-color);
-    background-color: var(--search-bg-color);
+	color: var(--text-color);
+	border: 1px solid var(--border-color);
+	background-color: var(--search-bg-color);
 }
 
 /* --- 5. Footer Styling --- */
 
 .footer {
-    background: var(--footer-bg-color);
-    color: var(--footer-text-color);
+	background: var(--footer-bg-color);
+	color: var(--footer-text-color);
 }
 
 .footer a {
-    color: var(--link-color);
+	color: var(--link-color);
 }
 
 /* --- 6. Content Wrapper for Background Image Setting --- */
 
 .bodywrapper {
-    background-color: var(--main-bg-color);
-    transition: background-color 0.3s;
+	background-color: var(--main-bg-color);
+	transition: background-color 0.3s;
 }
 
 body.dark-theme .bodywrapper .body {
-    --heading-color: black;
+	--heading-color: black;
 }
 
 #rellinks {
-    background-color: orange;
+	background-color: orange;
 }
 
 /* --- 7. Random Theme Overrides --- */
 
 /* Define the new CSS variables for random colors (set via JS) */
 :root {
-    --random-main-bg-color: #282c34;
-    --random-text-color: #c9c9c9;
-    --random-heading-color: #ffffff;
-    --random-link-color: #92b0ff;
-    --random-link-hover-color: #a8c1ff;
-    --random-sidebar-bg-color: rgba(40, 44, 52, 0.9);
-    --random-border-color: #3e4451;
-    --random-footer-bg-color: #1a1a1a;
+	--random-main-bg-color: #282c34;
+	--random-text-color: #c9c9c9;
+	--random-heading-color: #ffffff;
+	--random-link-color: #92b0ff;
+	--random-link-hover-color: #a8c1ff;
+	--random-sidebar-bg-color: rgba(40, 44, 52, 0.9);
+	--random-border-color: #3e4451;
+	--random-footer-bg-color: #1a1a1a;
 }
 
 /* Apply the custom random variables when the body has the custom-random-theme class */
 body.custom-random-theme {
-    /* Primary Colors */
-    --text-color: var(--random-text-color);
-    --heading-color: var(--random-heading-color);
-    --main-bg-color: var(--random-main-bg-color);
-    --sidebar-bg-color: var(--random-sidebar-bg-color);
-    --border-color: var(--random-border-color);
-    --link-color: var(--random-link-color);
-    --link-hover-color: var(--random-link-hover-color);
-    --current-link-color: var(--random-heading-color);
-    --search-bg-color: var(--random-border-color);
-    --footer-bg-color: var(--random-footer-bg-color);
-    --footer-text-color: var(--random-text-color);
+	/* Primary Colors */
+	--text-color: var(--random-text-color);
+	--heading-color: var(--random-heading-color);
+	--main-bg-color: var(--random-main-bg-color);
+	--sidebar-bg-color: var(--random-sidebar-bg-color);
+	--border-color: var(--random-border-color);
+	--link-color: var(--random-link-color);
+	--link-hover-color: var(--random-link-hover-color);
+	--current-link-color: var(--random-heading-color);
+	--search-bg-color: var(--random-border-color);
+	--footer-bg-color: var(--random-footer-bg-color);
+	--footer-text-color: var(--random-text-color);
 
-    /* Commit Specific Colors (Random Theme) */
-    --commit-link-color: var(--random-link-color);
-    --commit-date-color: #ffcc00; /* Yellow */
+	/* Commit Specific Colors (Random Theme) */
+	--commit-link-color: var(--random-link-color);
+	--commit-date-color: #ffcc00; /* Yellow */
 }
 
 body.custom-random-theme .bodywrapper {
-    background-color: var(--random-main-bg-color);
+	background-color: var(--random-main-bg-color);
 }
 
 /* --- 8. Custom Vertical Orange Gradient for bodywrapper --- */
 
 .bodywrapper .body {
-    background-image: linear-gradient(
-        to bottom,
-        #FFF3E0 0%,
-        #FFB74D 50%,
-        #E65100 100%
-    ) !important;
+	background-image: linear-gradient(
+		to bottom,
+		#fff3e0 0%,
+		#ffb74d 50%,
+		#e65100 100%
+	) !important;
 
-    background-color: #E65100;
+	background-color: #e65100;
 }
 
 div.body {
-    padding-left: 40px;
-    padding-right: 40px;
+	padding-left: 40px;
+	padding-right: 40px;
 }
 
 div.body .caption {
-    font-size: 16pt;
+	font-size: 16pt;
 }
 
 /* --- 9. Custom Commit Banner and Dropdown Styles --- */
 
 #full-width-commit-banner {
-    width: 100%;
-    background-color: #333;
-    color: white;
-    padding: 10px 0;
-    text-align: left;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
-    position: relative;
-    z-index: 1000;
+	width: 100%;
+	background-color: #333;
+	color: white;
+	padding: 10px 0;
+	text-align: left;
+	box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+	position: relative;
+	z-index: 1000;
 }
 
 /* Base style for banner buttons */
 .banner-button {
-    margin-left: 20px;
-    padding: 8px 15px;
-    background-color: #555;
-    color: white;
-    border: none;
-    cursor: pointer;
-    margin-right: 10px; /* Space between buttons */
+	margin-left: 20px;
+	padding: 8px 15px;
+	background-color: #555;
+	color: white;
+	border: none;
+	cursor: pointer;
+	margin-right: 10px; /* Space between buttons */
 }
 
 /* Base style for both dropdowns */
 .dropdown-content {
-    position: absolute;
-    top: 100%;
-    border: 1px solid #ccc;
-    max-height: 400px;
-    overflow-y: auto;
-    z-index: 1001;
-    padding: 10px;
+	position: absolute;
+	top: 100%;
+	border: 1px solid #ccc;
+	max-height: 400px;
+	overflow-y: auto;
+	z-index: 1001;
+	padding: 10px;
 }
 
 /* Initial hidden state for the dropdown content (used by JS to toggle) */
 .commit-dropdown-hidden {
-    display: none;
+	display: none;
 }
 
 /* Positioning the commit dropdown */
 #commit-dropdown-content {
-    left: 20px;
-    width: 300px;
+	left: 20px;
+	width: 300px;
 }
 
 /* Positioning the theme dropdown (adjust '250px' based on layout/button width) */
 #theme-options-content {
-    left: 250px;
-    width: 180px;
+	left: 250px;
+	width: 180px;
 }
-
 
 /* Theme/Background options list formatting */
 #theme-options-content h3 {
-    margin-top: 10px;
-    margin-bottom: 5px;
-    font-size: 1em;
-    color: var(--heading-color);
+	margin-top: 10px;
+	margin-bottom: 5px;
+	font-size: 1em;
+	color: var(--heading-color);
 }
 
 .theme-option-group {
-    padding-left: 5px;
-    margin-bottom: 15px;
+	padding-left: 5px;
+	margin-bottom: 15px;
 }
 
 .theme-option-group p {
-    margin: 3px 0;
+	margin: 3px 0;
 }
 
 .theme-switch-link {
-    color: var(--link-color) !important;
-    text-decoration: none;
-    font-size: 0.9em;
+	color: var(--link-color) !important;
+	text-decoration: none;
+	font-size: 0.9em;
 }
 
 #commit-search {
-    width: 95%;
-    padding: 5px;
-    margin-bottom: 10px;
-    /* Ensure the search bar respects theme colors */
-    background-color: var(--search-bg-color);
-    color: var(--text-color);
-    border-color: var(--border-color);
+	width: 95%;
+	padding: 5px;
+	margin-bottom: 10px;
+	/* Ensure the search bar respects theme colors */
+	background-color: var(--search-bg-color);
+	color: var(--text-color);
+	border-color: var(--border-color);
 }
 
 /* --- 10. CSS Class Styles for Dynamic Content (Commits and Dropdowns) --- */
 
 /* Style for the short SHA link (used in renderCommits) */
 .commit-sha-link {
-    color: var(--commit-link-color) !important;
-    font-weight: bold;
-    text-decoration: none;
+	color: var(--commit-link-color) !important;
+	font-weight: bold;
+	text-decoration: none;
 }
 
 .commit-sha-link:hover {
-    text-decoration: underline;
+	text-decoration: underline;
 }
 
 /* Style for the date span (used in renderCommits) */
 .commit-date-span {
-    color: var(--commit-date-color);
+	color: var(--commit-date-color);
 }
 
 /* Style for the Pull Request link (used in formatCommitMessage) */
 .commit-pr-link {
-    color: var(--commit-link-color) !important;
-    font-weight: bold;
-    text-decoration: underline;
+	color: var(--commit-link-color) !important;
+	font-weight: bold;
+	text-decoration: underline;
 }
 
 /* Ensure ALL dropdown content uses the correct theme colors */
 body .dropdown-content {
-    background-color: var(--main-bg-color);
-    color: var(--text-color);
-    border-color: var(--border-color);
+	background-color: var(--main-bg-color);
+	color: var(--text-color);
+	border-color: var(--border-color);
 }
