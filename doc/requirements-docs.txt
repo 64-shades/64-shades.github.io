@@ -6,3 +6,4 @@ sphinx-intl
 sphinx-markdown-tables
 sphinx-notfound-page
 sphinx_rtd_theme
+urllib3>=2.6.3 # not directly required, pinned by Snyk to avoid a vulnerability
